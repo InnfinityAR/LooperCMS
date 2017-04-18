@@ -1,0 +1,1535 @@
+[ 2017-04-06T20:48:49+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.289706s][吞吐率：3.45req/s] [内存消耗：6,776.39kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002797s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009234s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002179s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017369s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001459s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001845s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001433s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.018558s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001149s ]
+[ error ] [8]未定义数组索引: path[E:\wamp\www\YFCMF\app\admin\controller\Music.php:198]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:49:40+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.274833s][吞吐率：3.64req/s] [内存消耗：6,589.70kb] [文件加载：73]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002786s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009541s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002168s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017965s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001110s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002262s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001270s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.016962s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001064s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:17+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.510477s][吞吐率：1.96req/s] [内存消耗：7,182.51kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003850s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009029s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'diyflag',
+  7 => 'news_flag',
+  8 => 'news_list',
+  9 => 'music_list',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005515s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010993s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017347s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001125s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001984s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.017557s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.017691s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.001002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.023664s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000711s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001286s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:17+08:00 ] ::1 ::1 GET /YFCMF/public/datePicker/bootstrap-datepicker.css.map
+[ log ] localhost/YFCMF/public/datePicker/bootstrap-datepicker.css.map [运行时间：0.197123s][吞吐率：5.07req/s] [内存消耗：3,445.67kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'datePicker',
+    2 => 'bootstrap-datepicker.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:35+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_add.html
+[ log ] localhost/YFCMF/admin/music/albumn_add.html [运行时间：0.385730s][吞吐率：2.59req/s] [内存消耗：6,946.27kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002906s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008560s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_add[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'source',
+  8 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.009316s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002271s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019069s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001163s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001917s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 330 LIMIT 1 [ RunTime:0.000836s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 8 ORDER BY `sort` [ RunTime:0.001377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016688s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.014046s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000910s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:36+08:00 ] ::1 ::1 GET /YFCMF/public/datePicker/bootstrap-datepicker.css.map
+[ log ] localhost/YFCMF/public/datePicker/bootstrap-datepicker.css.map [运行时间：0.190319s][吞吐率：5.25req/s] [内存消耗：3,445.67kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'datePicker',
+    2 => 'bootstrap-datepicker.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:39+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_list.html
+[ log ] localhost/YFCMF/admin/music/albumn_list.html [运行时间：0.457438s][吞吐率：2.19req/s] [内存消耗：7,230.52kb] [文件加载：83]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003148s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008407s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_list[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_list.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'page',
+  7 => 'diyflag',
+  8 => 'menu',
+  9 => 'keytype',
+  10 => 'keyy',
+  11 => 'sldate',
+  12 => 'diyflag_check',
+  13 => 'news',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007165s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002695s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.016630s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_list' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001286s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001835s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_list'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001446s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 329 LIMIT 1 [ RunTime:0.001101s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 8 ORDER BY `sort` [ RunTime:0.001820s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.017183s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_loop_ablumn` `a` INNER JOIN `yf_member_list` `b` ON `a`.`manageid`=`b`.`member_list_id` LIMIT 1 [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.* FROM `yf_loop_ablumn` `a` INNER JOIN `yf_member_list` `b` ON `a`.`manageid`=`b`.`member_list_id` ORDER BY creationdate desc LIMIT 0,10 [ RunTime:0.004570s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.018517s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.001129s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:39+08:00 ] ::1 ::1 GET /YFCMF/public/datePicker/bootstrap-datepicker.css.map
+[ log ] localhost/YFCMF/public/datePicker/bootstrap-datepicker.css.map [运行时间：0.177872s][吞吐率：5.62req/s] [内存消耗：3,445.67kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'datePicker',
+    2 => 'bootstrap-datepicker.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:42+08:00 ] ::1 ::1 POST /YFCMF/admin/music/albumn_list.html
+[ log ] localhost/YFCMF/admin/music/albumn_list.html [运行时间：0.498592s][吞吐率：2.01req/s] [内存消耗：12,714.49kb] [文件加载：102]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '8',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'page' => '18',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.192763s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008302s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_list[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\ajax_music_list.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'page',
+  7 => 'diyflag',
+  8 => 'menu',
+  9 => 'keytype',
+  10 => 'keyy',
+  11 => 'sldate',
+  12 => 'diyflag_check',
+  13 => 'news',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006452s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002633s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.016351s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/music/albumn_list.html' , 'admin' , 'Music' , 'albumn_list' , 'Ajax' , 'a:1:{s:4:\"page\";s:2:\"18\";}' , 1491483042) [ RunTime:0.001657s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019325s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_list' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001223s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001947s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_list'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001133s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 329 LIMIT 1 [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 8 ORDER BY `sort` [ RunTime:0.001377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.015948s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_loop_ablumn` `a` INNER JOIN `yf_member_list` `b` ON `a`.`manageid`=`b`.`member_list_id` LIMIT 1 [ RunTime:0.001250s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.* FROM `yf_loop_ablumn` `a` INNER JOIN `yf_member_list` `b` ON `a`.`manageid`=`b`.`member_list_id` ORDER BY creationdate desc LIMIT 170,10 [ RunTime:0.005674s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.022013s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.001103s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:45+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.402343s][吞吐率：2.49req/s] [内存消耗：6,892.17kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002822s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008298s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005414s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002172s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017244s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001270s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001882s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001253s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000890s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001598s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.024512s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.016011s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000980s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.014739s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001092s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:50:46+08:00 ] ::1 ::1 GET /YFCMF/public/datePicker/bootstrap-datepicker.css.map
+[ log ] localhost/YFCMF/public/datePicker/bootstrap-datepicker.css.map [运行时间：0.163904s][吞吐率：6.10req/s] [内存消耗：3,445.67kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'datePicker',
+    2 => 'bootstrap-datepicker.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-06T20:51:07+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.275645s][吞吐率：3.63req/s] [内存消耗：6,590.95kb] [文件加载：73]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003837s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008026s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002443s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017795s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001374s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002167s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001676s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000867s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001587s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.018003s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001775s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:51:48+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.256642s][吞吐率：3.90req/s] [内存消耗：6,592.10kb] [文件加载：73]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003446s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007650s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002281s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019049s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001356s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002272s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001540s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001018s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001766s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.015475s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001338s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:52:16+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.321913s][吞吐率：3.11req/s] [内存消耗：6,776.52kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003613s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008880s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002551s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.018069s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.002178s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001835s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001703s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000928s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.021033s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001144s ]
+[ error ] [8]Array to string conversion[E:\wamp\www\YFCMF\app\admin\controller\Music.php:200]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:52:27+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.712207s][吞吐率：1.40req/s] [内存消耗：6,591.45kb] [文件加载：73]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.004010s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008363s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002197s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.243380s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001439s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.003030s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001390s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001417s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001890s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.223598s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001144s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:52:41+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.455441s][吞吐率：2.20req/s] [内存消耗：6,891.76kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002846s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009074s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007806s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002656s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017426s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001680s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001824s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001419s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.019561s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.019433s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.001207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.020893s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000972s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001520s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:52:42+08:00 ] ::1 ::1 GET /YFCMF/public/datePicker/bootstrap-datepicker.css.map
+[ log ] localhost/YFCMF/public/datePicker/bootstrap-datepicker.css.map [运行时间：0.181148s][吞吐率：5.52req/s] [内存消耗：3,445.67kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'datePicker',
+    2 => 'bootstrap-datepicker.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-06T20:57:36+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.643663s][吞吐率：1.55req/s] [内存消耗：7,214.75kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003455s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008515s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002333s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.018840s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001448s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001821s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001442s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001107s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.016881s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.018189s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000718s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016750s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001253s ]
+[ error ] [8]未定义数组索引: news_pic_type[E:\wamp\www\YFCMF\data\runtime\temp\241bfe76cbe34ede265a68c9cd8fb963.php:320]
+
+---------------------------------------------------------------
+[ 2017-04-06T20:58:53+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.587909s][吞吐率：1.70req/s] [内存消耗：6,917.83kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.004455s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007296s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002851s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.020749s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001743s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002111s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001838s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001023s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.002018s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.017738s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.017680s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.026329s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.001134s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000823s ]
+[ error ] [8]未定义数组索引: news_pic_type[E:\wamp\www\YFCMF\data\runtime\temp\241bfe76cbe34ede265a68c9cd8fb963.php:320]
+
+---------------------------------------------------------------
+[ 2017-04-06T21:01:41+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.575927s][吞吐率：1.74req/s] [内存消耗：6,917.83kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002494s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008046s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002529s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017489s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001288s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002090s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.019791s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.018677s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.017040s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000701s ]
+[ error ] [8]未定义数组索引: news_pic_type[E:\wamp\www\YFCMF\data\runtime\temp\241bfe76cbe34ede265a68c9cd8fb963.php:320]
+
+---------------------------------------------------------------
+[ 2017-04-06T21:02:19+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.587525s][吞吐率：1.70req/s] [内存消耗：7,208.15kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001912s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.006904s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002641s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017533s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001229s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001889s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.017290s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001277s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.016408s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016658s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000680s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000546s ]
+[ error ] [8]未定义数组索引: news_pic_type[E:\wamp\www\YFCMF\data\runtime\temp\241bfe76cbe34ede265a68c9cd8fb963.php:327]
+
+---------------------------------------------------------------
+[ 2017-04-06T21:02:52+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.600890s][吞吐率：1.66req/s] [内存消耗：7,208.02kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001795s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007389s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011286s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.018027s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001119s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001731s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001442s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001331s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.014934s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001118s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.018061s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016786s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000848s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000769s ]
+[ error ] [8]未定义数组索引: news_pic_type[E:\wamp\www\YFCMF\data\runtime\temp\241bfe76cbe34ede265a68c9cd8fb963.php:339]
+
+---------------------------------------------------------------
+[ 2017-04-06T21:03:07+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.618947s][吞吐率：1.62req/s] [内存消耗：7,208.42kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001769s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007082s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002584s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.016787s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001152s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002196s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001132s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001169s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.016928s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.018942s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016690s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000639s ]
+[ error ] [8]未定义数组索引: news_pic_content[E:\wamp\www\YFCMF\data\runtime\temp\241bfe76cbe34ede265a68c9cd8fb963.php:342]
+
+---------------------------------------------------------------
+[ 2017-04-06T21:03:20+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.449471s][吞吐率：2.22req/s] [内存消耗：7,187.62kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/music/albumn_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002199s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007184s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005546s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002365s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.018191s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001274s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001787s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001496s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.018521s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.016985s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.018065s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.001009s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T21:03:21+08:00 ] ::1 ::1 GET /YFCMF/public/datePicker/bootstrap-datepicker.css.map
+[ log ] localhost/YFCMF/public/datePicker/bootstrap-datepicker.css.map [运行时间：0.171750s][吞吐率：5.82req/s] [内存消耗：3,445.67kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'datePicker',
+    2 => 'bootstrap-datepicker.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-06T21:05:29+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.407902s][吞吐率：2.45req/s] [内存消耗：6,889.30kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002867s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008030s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006983s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011292s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.018542s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001521s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001292s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001196s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.015297s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.017722s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.017408s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.000576s ]
+
+---------------------------------------------------------------
+[ 2017-04-06T21:07:25+08:00 ] ::1 ::1 GET /YFCMF/admin/music/albumn_edit/albumnid/249.html
+[ log ] localhost/YFCMF/admin/music/albumn_edit/albumnid/249.html [运行时间：0.448503s][吞吐率：2.23req/s] [内存消耗：6,889.30kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'music',
+    2 => 'albumn_edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|4; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; PHPSESSID=g2l31d4ojej8rt5oc7v44pf3k4; yf_logged_user=frKWrsefrsxJFsL-W; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'albumnid' => '249',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003171s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007900s ]
+[ info ] [ RUN ] app\admin\controller\Music->albumn_edit[ E:\wamp\www\YFCMF\app\admin\controller\Music.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\music\albumn_edit.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'pic_list',
+  7 => 'diyflag',
+  8 => 'news_flag',
+  9 => 'news_list',
+  10 => 'music_list',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006617s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011777s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019415s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001689s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002322s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Music/albumn_edit'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001963s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001145s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001675s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_music` [ RunTime:0.019884s ]
+[ sql ] [ SQL ] SELECT `b`.`path` FROM `yf_loop_music` `a` INNER JOIN `yf_plug_files` `b` ON `a`.`fileid`=`b`.`id` INNER JOIN `yf_loop_ablumn` `c` ON `c`.`albumnid`=`b`.`albumnid` WHERE  (  c.albumnid=249 ) [ RunTime:0.001612s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_loop_ablumn` [ RunTime:0.027119s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.001170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.019947s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.001293s ]
+[ sql ] [ SQL ] SELECT `albumnstyle` FROM `yf_loop_ablumn` WHERE  (  albumnid=249 ) [ RunTime:0.001093s ]
+
+---------------------------------------------------------------

@@ -1,0 +1,49 @@
+{foreach name="news" item="v"}
+	<tr>
+		<td class="hidden-xs center"><input name="{$v.albumnid}" value="{$v.albumnid|default=50}" class="list_order news_order"/></td>
+		<td><a href="{:url('admin/Music/albumn_edit',array('albumnid'=>$v['albumnid']))}" title="{$v.albumnname}">{$v.albumnname|subtext=25}</a>【{$v['member_list_nickname']|default=$v['member_list_username']}】</td>
+		<!--专辑风格-->
+		<td class="hidden-sm hidden-xs">
+			<span style="color:#03C">{$v['albumnstyle']}</span>
+			</td>
+		<td class="hidden-xs">{$v.creationdate}</td>
+		<td>
+			<div class="hidden-sm hidden-xs action-buttons">
+				<a class="green" href="{:url('admin/Music/albumn_edit',array('albumnid'=>$v['albumnid']))}" data-toggle="tooltip" title="修改">
+					<i class="ace-icon fa fa-pencil bigger-130"></i>
+				</a>
+				<a class="red confirm-rst-url-btn" data-info="你确定要删除吗？" href="{:url('admin/Music/albumn_del',array('albumnid'=>$v['albumnid'],'p'=>input('p',1)))}" title="回收站" data-toggle="tooltip">
+					<i class="ace-icon fa fa-trash-o bigger-130"></i>
+				</a>
+			</div>
+			<div class="hidden-md hidden-lg">
+				<div class="inline position-relative">
+					<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+						<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+						<li>
+							<a href="{:url('admin/Music/albumn_edit',array('albumnid'=>$v['albumnid']))}" class="tooltip-success" data-rel="tooltip" title="" data-original-title="修改">
+								<span class="green">
+									<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:url('admin/Music/albumn_del',array('albumnid'=>$v['albumnid'],'p'=>input('p',1)))}" data-info="你确定要删除到回收站吗？" class="tooltip-error confirm-rst-url-btn" data-rel="tooltip" title="回收站" data-original-title="回收站">
+								<span class="red">
+									<i class="ace-icon fa fa-trash-o bigger-120"></i>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</td>
+	</tr>
+{/foreach}
+<tr>
+	<td colspan="2" align="left"class="hidden-lg hidden-md hidden-sm">{$page}</td>
+	<td align="left" class="hidden-xs center"><button  id="btnorder" href="{:url('admin/Music/albumn_order')}" class="btn btn-white btn-yellow btn-sm">排序</button></td>
+	<td colspan="7" align="right" class="hidden-xs">{$page}</td>
+</tr>

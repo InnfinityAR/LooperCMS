@@ -1,0 +1,324 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+	<div class="page-content">
+		<!--主题-->
+		<div class="page-header">
+			<h1>
+				您当前操作
+				<small>
+					<i class="ace-icon fa fa-angle-double-right"></i>
+					添加loop
+				</small>
+			</h1>
+		</div>
+		<div class="row">
+			<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/News/news_runadd')}"  enctype="multipart/form-data">
+				<!--//所属栏目改为所属专辑-->
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> loop名称：  </label>
+						<div class="col-sm-10">
+							<input type="text" name="news_title" id="news_title"  placeholder="必填：loop名称"  class="col-xs-10 col-sm-6" required/>
+							<span class="help-inline col-xs-12 col-sm-7">
+								<span class="middle" id="resone"></span>
+							</span>
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> loop风格：  </label>
+						<div class="checkbox" >
+							<div style="height:44px; overflow-y: scroll;" id="auto_flag">
+								{foreach name='diyflag' item='diyflag'}
+									<label id="news_flag_{$diyflag.diyflag_name}">
+										<input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="{$diyflag.diyflag_name}" />
+										<span class="lbl"> {$diyflag.diyflag_name}</span>
+									</label>
+								{/foreach}
+							</div>
+							<span class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="float: right; overflow:hidden; ">
+								自定义风格
+							</span>
+							<!-- 模态框（Modal） -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+												&times;
+											</button>
+											<h4 class="modal-title" id="myModalLabel">
+												请输入自定义风格
+											</h4>
+										</div>
+										<div class="modal-body">
+											<input type="text" name="self_flag" id="self_flag" placeholder="EDM" style="margin: 0px; padding: 0px;">
+										</div>
+										<div class="modal-footer">
+											<span  class="btn btn-primary" data-dismiss="modal">
+												确定创建
+											</span>
+											<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+											</button>
+										</div>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal -->
+							</div>
+						</div>
+						<script>
+							$(function(){
+								$('[class="btn btn-primary"]').click(function(){
+									var $str="";
+									$input=$("#self_flag").val();
+									if ($input !=""){
+										if($input.length<1 || $input.length>20){
+												alert("风格名称应该在1——20之间");
+										}else {
+											$.ajax({ //一个Ajax过程
+												type: "post", //以post方式与后台沟通
+												url : "{:url('admin/News/news_flag')}", //与此php页面沟通
+												dataType:'json',//从php返回的值以 JSON方式 解释
+												data: 'creat_flag='+$input ,//发给php的数据
+												success: function(date){
+													var $str="";
+													$("#auto_flag").html("");
+														for(i=0;i<date.length;i++){
+															$str+='<label id="news_flag_'+date[i]["diyflag_name"]+'"><input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="'+date[i]["diyflag_name"]+'" /> <span class="lbl">'+date[i]["diyflag_name"]+'</span>';
+														}
+													$("#auto_flag").html($str);
+													alert("创建成功请在上栏选择");
+												}
+											});
+										}
+									}else {
+										alert("风格名称不能为空");
+									}
+								});
+							});
+						</script>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop关键字：  </label>
+						<div class="col-sm-10">
+							<input type="text" name="news_key" id="news_key" placeholder="输入Loop关键字，以英文,逗号隔开" class="col-xs-10 col-sm-6" />
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop来源：  </label>
+						<div class="col-sm-10">
+							<input type="text" name="news_source" id="news_source" value="YFCMF" class="col-xs-10 col-sm-2" />
+							<label class="input_last">
+								常用：
+								{volist name="source" id="k"}
+									<a class="btn btn-minier btn-yellow" href="javascript:;" onclick="return souadd('{$k.source_name}');" >{$k.source_name}</a>&nbsp;
+								{/volist}
+							</label>
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop封面上传： </label>
+						<div class="col-sm-10">
+							<a href="javascript:;" class="file">
+								<input type="file" name="pic_one[]" id="file0" />
+								选择上传文件
+							</a>
+							<span class="lbl">&nbsp;&nbsp;<img src="__PUBLIC__/img/no_img.jpg" width="100" height="70" id="img0" >
+							</span>&nbsp;&nbsp;
+							<a href="javascript:;" onClick="return backpic('__PUBLIC__/img/no_img.jpg');" title="还原修改前的图片" class="file">
+								撤销上传
+							</a>
+							<span class="lbl">&nbsp;&nbsp;上传前先用PS处理成等比例图片后上传，最后都统一比例<br /></span>
+						</div>
+						<script type="text/javascript">
+							function imgform(url){
+								indexurl=url.lastIndexOf(".");
+								ss = url.substr(indexurl+1, 3); // 获取子字符串。
+								if(!((ss=="jpg") || (ss=="png"))){
+									alert("请输入正确的图格式为JPG、PNG");
+								}
+							}
+							$("#file0").change(function(){
+								$aa=$(this).val()
+								imgform($aa);
+							});
+						</script>
+					</div>
+					<div class="space-4"></div>
+				<!--从专辑中选择歌曲-->
+				<div class="form-group" >
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 从已有专辑中选择音乐： </label>
+					<div class="col-sm-10">
+						<select id="ms" multiple="multiple">
+							{foreach name='music_list' item='music_result' key='k' }
+							<optgroup label="{$k}">
+								{foreach name='music_result' item='v' }
+								<option value="{$v.id}">{$v.filename}</option>
+								{/foreach}
+							</optgroup>
+							{/foreach}
+						</select>
+					</div>
+				</div>
+					<div class="space-4"></div>
+					<!-- 多图上传 -->
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 从本地选择音乐:</label>
+					<link href="__PUBLIC__/ppy/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+                    <script src="__PUBLIC__/ppy/js/fileinput.js" type="text/javascript"></script>
+                    <script src="__PUBLIC__/ppy/js/fileinput_locale_zh.js" type="text/javascript"></script>
+					<div class="form-group" id="pic_list" style=" float: left;">
+						<div class="col-sm-10 col-sm-offset-2" style="padding-top:5px;">
+							<input id="file-5" name="pic_list[]" type="file"  class="file"  multiple data-preview-file-type="any" data-upload-url="#" data-preview-file-icon=""><br />
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group" >
+						<div class="col-sm-10">
+							<div id="test22" width="500px" style="margin-left: 200px;overflow: auto;">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 是否审核： </label>
+						<div class="col-sm-10" style="padding-top:5px;">
+							<input name="news_open" id="news_open" value="1" class="ace ace-switch ace-switch-4 btn-flat" type="checkbox" />
+							<span class="lbl">&nbsp;&nbsp;默认关闭</span>
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop简介： </label>
+						<div class="col-sm-10">
+							<script src="__PUBLIC__/ueditor/ueditor.config.js" type="text/javascript"></script>
+							<script src="__PUBLIC__/ueditor/ueditor.all.js" type="text/javascript"></script>
+							<textarea name="news_content" rows="100%" style="width:100%" id="myEditor"></textarea>
+							<script type="text/javascript">
+								var editor = new UE.ui.Editor();
+								editor.render("myEditor");
+							</script>
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<input class="ace ace-checkbox-2" name="continue" type="checkbox" value="1">
+							<span class="lbl"> 发布后继续</span>
+							<button class="btn btn-info" type="submit">
+								<i class="ace-icon fa fa-check bigger-110"></i>
+								保存
+							</button>
+							&nbsp; &nbsp; &nbsp;
+							<button class="btn" type="reset">
+								<i class="ace-icon fa fa-undo bigger-110"></i>
+								重置
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div><!-- /.page-content -->
+{/block}
+{block name="scripts"}
+	<script>
+		$("#file-5").on('change', function(event) {
+			var oMyForm = new FormData();
+			for(i=0;i<$('#file-5')[0].files.length;i++){
+				oMyForm.append("file"+i, $('#file-5')[0].files[i]);
+			}
+			$.ajax({ //一个Ajax过程
+				type: "post", //以post方式与后台沟通
+				url : "{:url('admin/News/music_add')}", //与此php页面沟通
+				type: 'POST',
+				cache: false,
+				data: oMyForm,
+				processData: false,
+				contentType: false,
+				async: false,
+				dataType:'json',
+				success: function(data){
+					$('#ms').change();
+				}
+			});
+		});
+		//专辑选择选择
+		$('#ms').change(function(){
+			$fileid=$(this).val();
+			$.ajax({ //一个Ajax过程
+				type: "post", //以post方式与后台沟通
+				url : "{:url('admin/News/music_add')}", //与此php页面沟通
+				dataType:'json',//从php返回的值以 JSON方式 解释
+				data: 'fileid='+$fileid ,//发给php的数据
+				success: function(data){
+					$str="";
+					$("#test22").html($str);
+					$str='<table><tr><td>音乐名称</td><td width="200" align="center">排序</td><td>操作</td></tr>'
+					for(i=0;i<data.length;i++){
+						$str+='<tr height="40"><td>'+data[i]["filename"]+'</td>';
+						$str+='<td width="200" align="center"><input type="hidden" name="order_id" value='+data[i]["order_id"]+'><img src="/YFCMF/public/img/up.png"><img src="/YFCMF/public/img/down.png"></td>';
+						$str+='<td><input type="hidden" name="music_id" value='+data[i]["id"]+'><span name="del">删除</span></td></tr>';
+					}
+					$str+='</table>';
+					$("#test22").html($str);
+					$("#ms").val("");
+					$('[src="/YFCMF/public/img/up.png"]').on('click',(function(){
+						$order_id=$(this).prev().val();
+						$id=$(this).parents("td").next().children("input").val();
+						$.ajax({ //一个Ajax过程
+							type: "post", //以post方式与后台沟通
+							url: "{:url('admin/News/music_order')}", //与此php页面沟通
+							dataType: 'json',//从php返回的值以 JSON方式 解释
+							data: {'id':$id,'order_id':$order_id},//发给php的数据
+							success: function (data) {
+								$('#ms').change();
+							}
+						});
+					}));
+					$('[src="/YFCMF/public/img/down.png"]').on('click',(function(){
+						$order_id=$(this).prev().prev().val();
+						$id=$(this).parents("td").next().children("input").val();
+						$.ajax({ //一个Ajax过程
+							type: "post", //以post方式与后台沟通
+							url: "{:url('admin/News/music_order')}", //与此php页面沟通
+							dataType: 'json',//从php返回的值以 JSON方式 解释
+							data: {'id1':$id,'order_id1':$order_id},//发给php的数据
+							success: function (data) {
+								$('#ms').change();
+							}
+						});
+					}));
+					$('[name="del"]').on('click',(function(){
+						$id=$(this).prev().val();
+						$.ajax({ //一个Ajax过程
+							type: "post", //以post方式与后台沟通
+							url: "{:url('admin/News/music_listdel')}", //与此php页面沟通
+							dataType: 'json',//从php返回的值以 JSON方式 解释
+							data: 'id=' + $id,//发给php的数据
+							success: function (data) {
+								alert("删除成功");
+								$('#ms').change();
+							}
+						});
+					}));
+				}
+			});
+		}).multipleSelect({
+			width: '500px'
+		});
+		//跳转额外属性
+		$("#pptaddress").hide();
+		$("#news_flag_vaj").click(function(){
+			$("#pptaddress").toggle(400);
+		});
+		$("#cpprice").hide();
+		$("#news_flag_vacp").click(function(){
+			$("#cpprice").toggle(400);
+		});
+		$('.date-picker').datepicker({
+			autoclose: true,
+			todayHighlight: true,
+			language:'zh-CN',
+		});
+	</script>
+{/block}

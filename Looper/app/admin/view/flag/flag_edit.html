@@ -1,0 +1,101 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+	<div class="page-content">
+		<!--主题-->
+		<div class="page-header">
+			<h1>
+				您当前操作
+				<small>
+					<i class="ace-icon fa fa-angle-double-right"></i>
+					修改风格
+				</small>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Flag/flag_runedit')}"  enctype="multipart/form-data">
+					<input type="hidden" name="diyflag_id" id="n_id" value="{$diyflag_list.diyflag_id}" />
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 风格名称：  </label>
+						<div class="col-sm-10">
+							<input type="text" name="news_title" id="news_title"  value="{$diyflag_list.diyflag_name}"   class="col-xs-10 col-sm-6" required/>
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 封面图片上传： </label>
+						<div class="col-sm-10">
+							<input type="hidden" name="checkpic" id="checkpic1" value="{$diyflag_list.diyflag_img}" />
+							<input type="hidden" name="oldcheckpic" id="oldcheckpic1" value="{$diyflag_list.diyflag_img}" />
+							<a href="javascript:;" class="file" title="点击选择所要上传的图片">
+								<input type="file" name="pic_two" id="file1" multiple="multiple"/>
+								选择上传文件
+							</a>
+							<span class="lbl">&nbsp;&nbsp;<img src="{$diyflag_list.diyflag_img|get_imgurl}" width="100" height="70" id="img1" ></span>&nbsp;&nbsp;
+							<a href="javascript:;" onclick="return backpic1('{$diyflag_list.diyflag_img|get_imgurl}');" title="还原修改前的图片" class="file">
+								撤销修改
+							</a>
+							<span class="lbl">&nbsp;&nbsp;第一张图片<br /></span>
+						</div>
+					</div>
+					<script>
+
+					</script>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 封面图片上传： </label>
+						<div class="col-sm-10">
+							<input type="hidden" name="checkpic" id="checkpic" value="{$diyflag_list.diyflag_newimg}" />
+							<input type="hidden" name="oldcheckpic" id="oldcheckpic" value="{$diyflag_list.diyflag_newimg}" />
+							<a href="javascript:;" class="file" title="点击选择所要上传的图片">
+								<input type="file" name="pic_one" id="file0" multiple="multiple"/>
+								选择上传文件
+							</a>
+							<span class="lbl">&nbsp;&nbsp;<img src="{$diyflag_list.diyflag_newimg|get_imgurl}" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;
+							<a href="javascript:;" onclick="return backpic('{$diyflag_list.diyflag_newimg|get_imgurl}');" title="还原修改前的图片" class="file">
+								撤销修改
+							</a>
+							<span class="lbl">&nbsp;&nbsp;点击过后的图片<br /></span>
+						</div>
+					</div>
+					<script type="text/javascript">
+						function imgform(url){
+							indexurl=url.lastIndexOf(".");
+							ss = url.substr(indexurl+1, 3); // 获取子字符串。
+							if(!((ss=="jpg") || (ss=="png"))){
+								alert("请输入正确的图格式为JPG、PNG");
+							}
+						}
+						$("#file1").change(function(){
+							$aa=$(this).val()
+							imgform($aa);
+						});
+						$("#file0").change(function(){
+							$aa=$(this).val()
+							imgform($aa);
+						});
+					</script>
+					<div class="space-4"></div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<button class="btn btn-info" type="submit">
+								<i class="ace-icon fa fa-check bigger-110"></i>
+								保存
+							</button>
+							&nbsp; &nbsp; &nbsp;
+							<button class="btn" type="reset">
+								<i class="ace-icon fa fa-undo bigger-110"></i>
+								重置
+							</button>
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+	</div>
+
+{/block}
+{block name="scripts"}
+
+{/block}

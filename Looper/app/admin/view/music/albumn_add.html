@@ -1,0 +1,125 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+	<div class="page-content">
+		<!--主题-->
+		<div class="page-header">
+			<h1>
+				您当前操作
+				<small>
+					<i class="ace-icon fa fa-angle-double-right"></i>
+					添加专辑
+				</small>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Music/albumn_runadd')}"  enctype="multipart/form-data">
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑名称：  </label>
+						<div class="col-sm-10">
+							<input type="text" name="news_title" id="news_title"  placeholder="必填：专辑名称"  class="col-xs-10 col-sm-6" required/>
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑风格：  </label>
+						<div class="checkbox">
+							{foreach name='diyflag' item='diyflag'}
+								<label id="news_flag_{$diyflag.diyflag_name}">
+									<input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="{$diyflag.diyflag_name}" />
+									<span class="lbl"> {$diyflag.diyflag_name}</span>
+								</label>
+							{/foreach}
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑封面上传： </label>
+						<div class="col-sm-10">
+							<a href="javascript:;" class="file">
+								<input type="file" name="pic_one" id="file0" />
+								选择上传文件
+							</a>
+							<span class="lbl">&nbsp;&nbsp;<img src="__PUBLIC__/img/no_img.jpg" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;
+							<a href="javascript:;" onClick="return backpic('__PUBLIC__/img/no_img.jpg');" title="还原修改前的图片" class="file">
+								撤销上传
+							</a>
+							<span class="lbl">&nbsp;&nbsp;上传前先用PS处理成等比例图片后上传，最后都统一比例<br />
+</span>
+						</div>
+						<script type="text/javascript">
+							function imgform(url){
+								indexurl=url.lastIndexOf(".");
+								ss = url.substr(indexurl+1, 3); // 获取子字符串。
+								if(!((ss=="jpg") || (ss=="png"))){
+									alert("请输入正确的图格式为JPG、PNG");
+								}
+							}
+							$("#file0").change(function(){
+								$aa=$(this).val()
+								imgform($aa);
+							});
+						</script>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 艺人： </label>
+						<input type="text" name="artistname">
+					</div>
+					<div class="space-4"></div>
+					 <!--多图上传-->
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 音乐上传： </label>
+					<link href="__PUBLIC__/ppy/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+					<script src="__PUBLIC__/ppy/js/fileinput.js" type="text/javascript"></script>
+					<script src="__PUBLIC__/ppy/js/fileinput_locale_zh.js" type="text/javascript"></script>
+					<div class="form-group" id="pic_list">
+						<div class="col-sm-10 col-sm-offset-2" style="padding-top:5px;">
+							<input id="file-5" name="music[]" type="file"  class="file"  multiple data-preview-file-type="any" data-upload-url="#" data-preview-file-icon=""><br />
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<!--//专辑简介：-->
+					<div class="space-4"></div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<input class="ace ace-checkbox-2" name="continue" type="checkbox" value="1">
+							<span class="lbl"> 发布后继续</span>
+							<button class="btn btn-info" type="submit">
+								<i class="ace-icon fa fa-check bigger-110"></i>
+								保存
+							</button>
+							<!--<input type="submit" value="提交">-->
+
+							&nbsp; &nbsp; &nbsp;
+							<button class="btn" type="reset">
+								<i class="ace-icon fa fa-undo bigger-110"></i>
+								重置
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div><!-- /.page-content -->
+{/block}
+{block name="scripts"}
+	<script>
+			//多图设置
+
+			//跳转额外属性
+			$("#pptaddress").hide();
+			$("#news_flag_vaj").click(function(){
+				$("#pptaddress").toggle(400);
+			});
+			$("#cpprice").hide();
+			$("#news_flag_vacp").click(function(){
+				$("#cpprice").toggle(400);
+			});
+			$('.date-picker').datepicker({
+					autoclose: true,
+					todayHighlight: true,
+					language:'zh-CN',
+				})
+	</script>
+{/block}

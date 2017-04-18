@@ -1,0 +1,106 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+	<div class="page-content">
+		<!--主题-->
+		<div class="page-header">
+			<h1>
+				您当前操作
+				<small>
+					<i class="ace-icon fa fa-angle-double-right"></i>
+					添加风格
+				</small>
+			</h1>
+		</div>
+		<div class="row">
+			<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Flag/flag_runadd')}"  enctype="multipart/form-data">
+				<!--//所属栏目改为所属专辑-->
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格名称：  </label>
+						<div class="col-sm-10">
+							<input type="text" name="news_title" id="news_title"  placeholder="必填：风格名称"  class="col-xs-10 col-sm-6" required/>
+						</div>
+					</div>
+					<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格封面上传： </label>
+					<div class="col-sm-10">
+						<a href="javascript:;" class="file">
+							<input type="file" name="pic_two" id="file1" />
+							选择上传文件
+						</a>
+							<span class="lbl">
+								&nbsp;&nbsp;<img src="__PUBLIC__/img/no_img.jpg" width="100" height="70" id="img1" >
+							</span>
+						&nbsp;&nbsp;
+						<a href="javascript:;" onClick="return backpic('__PUBLIC__/img/no_img.jpg');" title="还原修改前的图片" class="file">
+							撤销上传
+						</a>
+							<span class="lbl">
+								&nbsp;&nbsp;第一张图<br />
+							</span>
+					</div>
+				</div>
+
+				<div class="space-4"></div>
+				<!--第二个-->
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格封面上传： </label>
+						<div class="col-sm-10">
+							<a href="javascript:;" class="file">
+								<input type="file" name="pic_one" id="file0" />
+								选择上传文件
+							</a>
+							<span class="lbl">
+								&nbsp;&nbsp;<img src="__PUBLIC__/img/no_img.jpg" width="100" height="70" id="img0" >
+							</span>
+							&nbsp;&nbsp;
+							<a href="javascript:;" onClick="return backpic('__PUBLIC__/img/no_img.jpg');" title="还原修改前的图片" class="file">
+								撤销上传
+							</a>
+							<span class="lbl">
+								&nbsp;&nbsp;点击过后的图片<br />
+							</span>
+						</div>
+					</div>
+				<script type="text/javascript">
+					function imgform(url){
+						indexurl=url.lastIndexOf(".");
+						ss = url.substr(indexurl+1, 3); // 获取子字符串。
+						if(!((ss=="jpg") || (ss=="png"))){
+							alert("请输入正确的图格式为JPG、PNG");
+						}
+					}
+					$("#file1").change(function(){
+						$aa=$(this).val()
+						imgform($aa);
+					});
+					$("#file0").change(function(){
+						$aa=$(this).val()
+						imgform($aa);
+					});
+				</script>
+					<div class="space-4"></div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<input class="ace ace-checkbox-2" name="continue" type="checkbox" value="1">
+							<span class="lbl"> 发布后继续</span>
+							<button class="btn btn-info" type="submit">
+								<i class="ace-icon fa fa-check bigger-110"></i>
+								保存
+							</button>
+
+							&nbsp; &nbsp; &nbsp;
+							<button class="btn" type="reset">
+								<i class="ace-icon fa fa-undo bigger-110"></i>
+								重置
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div><!-- /.page-content -->
+{/block}
+{block name="scripts"}
+{/block}

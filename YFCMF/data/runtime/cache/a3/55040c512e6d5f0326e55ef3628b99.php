@@ -1,0 +1,3 @@
+<?php
+//000000000000a:18:{s:7:"map_lat";s:9:"23.029759";s:7:"map_lng";s:10:"113.752114";s:9:"site_name";s:27:"LooperCMS后台管理系统";s:9:"site_host";s:17:"http://localhost/";s:8:"site_tpl";s:7:"default";s:10:"site_tpl_m";s:7:"default";s:9:"site_logo";s:41:"/data/upload/2017-04-17/58f4390763fe7.png";s:8:"site_icp";s:0:"";s:11:"site_tongji";s:0:"";s:14:"site_copyright";s:0:"";s:12:"site_co_name";s:0:"";s:12:"site_address";s:0:"";s:8:"site_tel";s:17:"+86 769 8888 8888";s:16:"site_admin_email";s:18:"t.han@yiyuling.com";s:7:"site_qq";s:8:"81818832";s:14:"site_seo_title";s:23:"YFCMF内容管理框架";s:17:"site_seo_keywords";s:52:"YFCMF,php,内容管理框架,cmf,cms,雨飞工作室";s:20:"site_seo_description";s:77:"YFCMF是雨飞工作室发布的一款用于快速开发的内容管理框架";}
+?>

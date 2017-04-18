@@ -1,0 +1,3683 @@
+[ 2017-04-04T10:56:41+08:00 ] ::1 ::1 GET /YFCMF/admin
+[ log ] localhost/YFCMF/admin [运行时间：3.057951s][吞吐率：0.33req/s] [内存消耗：5,832.68kb] [文件加载：74]
+[ log ] Cron:clearlog Runat 2017-04-04 10:56:41 Use 0.041658 s
+
+
+[ 2017-04-04T10:56:41+08:00 ] ::1 ::1 GET /YFCMF/admin
+[ log ] localhost/YFCMF/admin [运行时间：3.316191s][吞吐率：0.30req/s] [内存消耗：5,928.25kb] [文件加载：76]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=qNYPnNroySoy0BXBC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.060641s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.324140s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T10:56:44+08:00 ] ::1 ::1 GET /YFCMF/admin/login/login.html
+[ log ] localhost/YFCMF/admin/login/login.html [运行时间：2.748662s][吞吐率：0.36req/s] [内存消耗：6,245.57kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=qNYPnNroySoy0BXBC; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.015841s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.112535s ]
+[ info ] [ RUN ] app\admin\controller\Login->login[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\login\login.html [ array (
+  0 => 'lang',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.028784s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T10:56:47+08:00 ] ::1 ::1 GET /YFCMF/admin/login/verify.html
+[ log ] localhost/YFCMF/admin/login/verify.html [运行时间：2.207548s][吞吐率：0.45req/s] [内存消耗：5,938.73kb] [文件加载：76]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=qNYPnNroySoy0BXBC; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.035259s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.116926s ]
+[ info ] [ RUN ] app\admin\controller\Login->verify[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.072140s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T10:56:50+08:00 ] ::1 ::1 GET /YFCMF/geetest.html?t=1491274609552
+[ log ] localhost/YFCMF/geetest.html?t=1491274609552 [运行时间：1.333926s][吞吐率：0.75req/s] [内存消耗：3,480.11kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\geetest\\GeetestController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=qNYPnNroySoy0BXBC; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643',
+)
+[ info ] [ PARAM ] array (
+  't' => '1491274609552',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\geetest\GeetestController->index[ E:\wamp\www\YFCMF\vendor\yfcmf\geetest\src\GeetestController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.024251s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T10:57:07+08:00 ] ::1 ::1 GET /YFCMF/admin/login/verify.html?0.2665972883565406
+[ log ] localhost/YFCMF/admin/login/verify.html?0.2665972883565406 [运行时间：1.402716s][吞吐率：0.71req/s] [内存消耗：5,939.22kb] [文件加载：76]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=qNYPnNroySoy0BXBC; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643',
+)
+[ info ] [ PARAM ] array (
+  '0_2665972883565406' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.015193s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.088368s ]
+[ info ] [ RUN ] app\admin\controller\Login->verify[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.044814s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T10:57:09+08:00 ] ::1 ::1 GET /YFCMF/admin/login/verify.html?0.14039286065744228
+[ log ] localhost/YFCMF/admin/login/verify.html?0.14039286065744228 [运行时间：1.576487s][吞吐率：0.63req/s] [内存消耗：5,939.34kb] [文件加载：76]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=qNYPnNroySoy0BXBC; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643',
+)
+[ info ] [ PARAM ] array (
+  '0_14039286065744228' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.015153s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.046709s ]
+[ info ] [ RUN ] app\admin\controller\Login->verify[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.055467s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T10:57:35+08:00 ] ::1 ::1 POST /YFCMF/admin/login/runlogin.html
+[ log ] localhost/YFCMF/admin/login/runlogin.html [运行时间：2.808519s][吞吐率：0.36req/s] [内存消耗：12,052.91kb] [文件加载：99]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'runlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '50',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=qNYPnNroySoy0BXBC; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_pwd' => '123456',
+  'verify' => 'wrjpi',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:1.683980s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.052350s ]
+[ info ] [ RUN ] app\admin\controller\Login->runlogin[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.023870s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081104s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.088710s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (0 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/login/runlogin.html' , 'admin' , 'Login' , 'runlogin' , 'Ajax' , 's:12:\"保密数据\";' , 1491274653) [ RunTime:0.110738s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_admin` [ RunTime:0.066728s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_admin` WHERE  `admin_username` = 'admin'  AND `admin_open` = 1 LIMIT 1 [ RunTime:0.006516s ]
+[ sql ] [ SQL ] UPDATE `yf_admin`  SET `admin_hits`=12,`admin_last_time`=1491274654  WHERE  `admin_id` = 1 [ RunTime:0.035868s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.003846s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_member_list` [ RunTime:0.067662s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_member_list` WHERE  `member_list_id` = 1 LIMIT 1 [ RunTime:0.005441s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T10:57:39+08:00 ] ::1 ::1 GET /YFCMF/admin/index/index.html
+[ log ] localhost/YFCMF/admin/index/index.html [运行时间：4.453900s][吞吐率：0.22req/s] [内存消耗：6,987.08kb] [文件加载：87]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643; yf_logged_user=vY6fsYIpoWt9VZx7V',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.017839s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.047727s ]
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\wamp\www\YFCMF\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\index\index.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'news_list',
+  7 => 'news_count',
+  8 => 'members_count',
+  9 => 'sugs_count',
+  10 => 'coms_count',
+  11 => 'tonews_count',
+  12 => 'ztnews_count',
+  13 => 'difday',
+  14 => 'tomembers_count',
+  15 => 'ztmembers_count',
+  16 => 'difday_m',
+  17 => 'tosugs_count',
+  18 => 'ztsugs_count',
+  19 => 'difday_s',
+  20 => 'tocoms_count',
+  21 => 'ztcoms_count',
+  22 => 'difday_c',
+) ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\info\gitinfo.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\info\Info @gitinfo [ RunTime:0.030784s ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\info\sysinfo.html [ array (
+  0 => 'info',
+  1 => 'update_check',
+  2 => 'ver_str',
+  3 => 'ver_last',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\info\Info @sysinfo [ RunTime:0.063701s ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\team\team.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\team\Team @team [ RunTime:0.088224s ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\maintain\maintain.html [ array (
+  0 => 'danger_mode_debug',
+  1 => 'weak_setting_db_password',
+  2 => 'weak_setting_admin_last_change_password',
+  3 => 'system_safe',
+  4 => 'system_pageshow',
+  5 => 'log_size',
+  6 => 'log_file_cnt',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\maintain\Maintain @maintain [ RunTime:0.643290s ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.135188s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014298s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.080936s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.030110s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = -1 LIMIT 1 [ RunTime:0.002984s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.006366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_news` [ RunTime:0.095521s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_news` WHERE  `news_l` = 'zh-cn' ORDER BY news_hits desc LIMIT 0,10 [ RunTime:0.032540s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` LIMIT 1 [ RunTime:0.002539s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_member_list` [ RunTime:0.073770s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_member_list` LIMIT 1 [ RunTime:0.002341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_plug_sug` [ RunTime:0.066621s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_plug_sug` LIMIT 1 [ RunTime:0.002344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_comments` [ RunTime:0.072770s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_comments` LIMIT 1 [ RunTime:0.002821s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` WHERE  `news_time` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.004090s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` WHERE  `news_time` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.003942s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_member_list` WHERE  `member_list_addtime` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.003249s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_member_list` WHERE  `member_list_addtime` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.003126s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_plug_sug` WHERE  `plug_sug_addtime` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.005015s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_plug_sug` WHERE  `plug_sug_addtime` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.002803s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_comments` WHERE  `createtime` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.002967s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_comments` WHERE  `createtime` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.002853s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T10:57:58+08:00 ] ::1 ::1 GET /YFCMF/admin/menu/news_menu_list.html
+[ log ] localhost/YFCMF/admin/menu/news_menu_list.html [运行时间：3.790269s][吞吐率：0.26req/s] [内存消耗：7,310.60kb] [文件加载：83]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'news_menu_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643; yf_logged_user=vY6fsYIpoWt9VZx7V',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.012749s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.044211s ]
+[ info ] [ RUN ] app\admin\controller\Menu->news_menu_list[ E:\wamp\www\YFCMF\app\admin\controller\Menu.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\menu\news_menu_list.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'arr',
+  7 => 'menu_l',
+  8 => 'page',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.055580s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009204s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.172262s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Menu/news_menu_list' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.005182s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.010200s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/Menu/news_menu_list'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.004684s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.002851s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 9 ORDER BY `sort` [ RunTime:0.006543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_menu` [ RunTime:0.074654s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_menu` ORDER BY menu_l Desc,listorder [ RunTime:0.118530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_model` [ RunTime:0.231476s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_model` WHERE  `model_id` = 2 LIMIT 1 [ RunTime:0.033425s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T10:58:14+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_list.html
+[ log ] localhost/YFCMF/admin/news/news_list.html [运行时间：3.140027s][吞吐率：0.32req/s] [内存消耗：7,421.71kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/menu/news_menu_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643; yf_logged_user=vY6fsYIpoWt9VZx7V',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.017505s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.037921s ]
+[ info ] [ RUN ] app\admin\controller\News->news_list[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_list.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'page',
+  7 => 'diyflag',
+  8 => 'menu',
+  9 => 'opentype_check',
+  10 => 'news_columnid',
+  11 => 'keytype',
+  12 => 'keyy',
+  13 => 'news_l',
+  14 => 'sldate',
+  15 => 'diyflag_check',
+  16 => 'news',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.039063s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023401s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.068556s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_list' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.004992s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.008435s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_list'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.004836s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.004180s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.007582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_news` [ RunTime:0.071263s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` INNER JOIN `yf_menu` `c` ON `a`.`news_columnid`=`c`.`id` WHERE  `news_back` = 0 LIMIT 1 [ RunTime:0.006167s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.*,`c`.`menu_name` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` INNER JOIN `yf_menu` `c` ON `a`.`news_columnid`=`c`.`id` WHERE  `news_back` = 0 ORDER BY news_time desc LIMIT 0,10 [ RunTime:0.061526s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.065114s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.025138s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T10:58:24+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：2.034181s][吞吐率：0.49req/s] [内存消耗：6,968.50kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643; yf_logged_user=vY6fsYIpoWt9VZx7V',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.015760s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.040426s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.029102s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015614s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.220485s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.005028s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.008918s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.005097s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.002633s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.006479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.065564s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.004035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.065395s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.003454s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T10:58:28+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491274707446
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491274707446 [运行时间：0.891252s][吞吐率：1.12req/s] [内存消耗：4,133.91kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643; yf_logged_user=vY6fsYIpoWt9VZx7V',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491274707446',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.016334s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.057420s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T10:58:49+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：2.309191s][吞吐率：0.43req/s] [内存消耗：12,324.88kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '32',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=8vvevtp0t5sf5l56vg1bj1j643; yf_logged_user=vY6fsYIpoWt9VZx7V',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '几天就好了突然',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.957877s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.035422s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.027514s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008047s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.065585s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:21:\"几天就好了突然\";}' , 1491274728) [ RunTime:0.007215s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.205490s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.004283s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.004908s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.004942s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.004744s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.003017s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.005679s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.131362s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='几天就好了突然' AND manage_id =1 ) [ RunTime:0.003321s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('几天就好了突然' , 1 , 0) [ RunTime:0.076928s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:50:31+08:00 ] ::1 ::1 GET /YFCMF/admin
+[ log ] localhost/YFCMF/admin [运行时间：3.151020s][吞吐率：0.32req/s] [内存消耗：5,926.16kb] [文件加载：75]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=vY6fsYIpoWt9VZx7V',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.038884s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.045206s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T12:50:31+08:00 ] ::1 ::1 GET /YFCMF/admin/login/login.html
+[ log ] localhost/YFCMF/admin/login/login.html [运行时间：0.572125s][吞吐率：1.75req/s] [内存消耗：5,987.00kb] [文件加载：78]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=vY6fsYIpoWt9VZx7V; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003502s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.099881s ]
+[ info ] [ RUN ] app\admin\controller\Login->login[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\login\login.html [ array (
+  0 => 'lang',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006251s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T12:50:33+08:00 ] ::1 ::1 GET /YFCMF/admin/login/verify.html
+[ log ] localhost/YFCMF/admin/login/verify.html [运行时间：1.432537s][吞吐率：0.70req/s] [内存消耗：5,938.61kb] [文件加载：76]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=vY6fsYIpoWt9VZx7V; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002785s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007949s ]
+[ info ] [ RUN ] app\admin\controller\Login->verify[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007019s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T12:50:40+08:00 ] ::1 ::1 GET /YFCMF/geetest.html?t=1491281439618
+[ log ] localhost/YFCMF/geetest.html?t=1491281439618 [运行时间：0.790036s][吞吐率：1.27req/s] [内存消耗：3,480.11kb] [文件加载：57]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\geetest\\GeetestController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=vY6fsYIpoWt9VZx7V; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4',
+)
+[ info ] [ PARAM ] array (
+  't' => '1491281439618',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\geetest\GeetestController->index[ E:\wamp\www\YFCMF\vendor\yfcmf\geetest\src\GeetestController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.018075s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T12:51:09+08:00 ] ::1 ::1 POST /YFCMF/admin/login/runlogin.html
+[ log ] localhost/YFCMF/admin/login/runlogin.html [运行时间：1.807768s][吞吐率：0.55req/s] [内存消耗：12,052.57kb] [文件加载：99]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'runlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '50',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=vY6fsYIpoWt9VZx7V; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_pwd' => '123456',
+  'verify' => 'uqtmt',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:1.413541s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008577s ]
+[ info ] [ RUN ] app\admin\controller\Login->runlogin[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005760s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046600s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.083682s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (0 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/login/runlogin.html' , 'admin' , 'Login' , 'runlogin' , 'Ajax' , 's:12:\"保密数据\";' , 1491281468) [ RunTime:0.024059s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_admin` [ RunTime:0.092705s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_admin` WHERE  `admin_username` = 'admin'  AND `admin_open` = 1 LIMIT 1 [ RunTime:0.002460s ]
+[ sql ] [ SQL ] UPDATE `yf_admin`  SET `admin_hits`=13,`admin_last_time`=1491281469  WHERE  `admin_id` = 1 [ RunTime:0.001472s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001223s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_member_list` [ RunTime:0.032829s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_member_list` WHERE  `member_list_id` = 1 LIMIT 1 [ RunTime:0.001479s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:51:09+08:00 ] ::1 ::1 POST /YFCMF/admin/login/runlogin.html
+[ log ] localhost/YFCMF/admin/login/runlogin.html [运行时间：0.943331s][吞吐率：1.06req/s] [内存消耗：11,448.41kb] [文件加载：97]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'runlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '50',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; yf_logged_user=vY6fsYIpoWt9VZx7V; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_pwd' => '123456',
+  'verify' => 'uqtmt',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.787184s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.012311s ]
+[ info ] [ RUN ] app\admin\controller\Login->runlogin[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006238s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002153s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.015053s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/login/runlogin.html' , 'admin' , 'Login' , 'runlogin' , 'Ajax' , 's:12:\"保密数据\";' , 1491281469) [ RunTime:0.001631s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:51:11+08:00 ] ::1 ::1 GET /YFCMF/admin/index/index.html
+[ log ] localhost/YFCMF/admin/index/index.html [运行时间：2.301059s][吞吐率：0.43req/s] [内存消耗：6,987.24kb] [文件加载：87]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003300s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009823s ]
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\wamp\www\YFCMF\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\index\index.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'news_list',
+  7 => 'news_count',
+  8 => 'members_count',
+  9 => 'sugs_count',
+  10 => 'coms_count',
+  11 => 'tonews_count',
+  12 => 'ztnews_count',
+  13 => 'difday',
+  14 => 'tomembers_count',
+  15 => 'ztmembers_count',
+  16 => 'difday_m',
+  17 => 'tosugs_count',
+  18 => 'ztsugs_count',
+  19 => 'difday_s',
+  20 => 'tocoms_count',
+  21 => 'ztcoms_count',
+  22 => 'difday_c',
+) ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\info\gitinfo.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\info\Info @gitinfo [ RunTime:0.006880s ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\info\sysinfo.html [ array (
+  0 => 'info',
+  1 => 'update_check',
+  2 => 'ver_str',
+  3 => 'ver_last',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\info\Info @sysinfo [ RunTime:0.055222s ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\team\team.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\team\Team @team [ RunTime:0.036022s ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF\addons\maintain\maintain.html [ array (
+  0 => 'danger_mode_debug',
+  1 => 'weak_setting_db_password',
+  2 => 'weak_setting_admin_last_change_password',
+  3 => 'system_safe',
+  4 => 'system_pageshow',
+  5 => 'log_size',
+  6 => 'log_file_cnt',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\maintain\Maintain @maintain [ RunTime:0.338429s ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.011935s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002675s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.133457s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.029809s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = -1 LIMIT 1 [ RunTime:0.000780s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_news` [ RunTime:0.283504s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_news` WHERE  `news_l` = 'zh-cn' ORDER BY news_hits desc LIMIT 0,10 [ RunTime:0.013470s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` LIMIT 1 [ RunTime:0.001104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_member_list` [ RunTime:0.018101s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_member_list` LIMIT 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_plug_sug` [ RunTime:0.110208s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_plug_sug` LIMIT 1 [ RunTime:0.001042s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_comments` [ RunTime:0.090389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_comments` LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` WHERE  `news_time` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.001973s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` WHERE  `news_time` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.001384s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_member_list` WHERE  `member_list_addtime` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_member_list` WHERE  `member_list_addtime` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.000807s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_plug_sug` WHERE  `plug_sug_addtime` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_plug_sug` WHERE  `plug_sug_addtime` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_comments` WHERE  `createtime` BETWEEN 1491235200 AND 1491321599 LIMIT 1 [ RunTime:0.000929s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_comments` WHERE  `createtime` BETWEEN 1491148800 AND 1491235199 LIMIT 1 [ RunTime:0.000639s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:51:11+08:00 ] ::1 ::1 GET /YFCMF/admin/login/verify.html?0.872986772861873
+[ log ] localhost/YFCMF/admin/login/verify.html?0.872986772861873 [运行时间：1.896124s][吞吐率：0.53req/s] [内存消耗：6,008.99kb] [文件加载：78]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  '0_872986772861873' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002909s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009283s ]
+[ info ] [ RUN ] app\admin\controller\Login->verify[ E:\wamp\www\YFCMF\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005827s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T12:53:47+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_list.html
+[ log ] localhost/YFCMF/admin/news/news_list.html [运行时间：0.959997s][吞吐率：1.04req/s] [内存消耗：7,422.49kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002266s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008484s ]
+[ info ] [ RUN ] app\admin\controller\News->news_list[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_list.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'page',
+  7 => 'diyflag',
+  8 => 'menu',
+  9 => 'opentype_check',
+  10 => 'news_columnid',
+  11 => 'keytype',
+  12 => 'keyy',
+  13 => 'news_l',
+  14 => 'sldate',
+  15 => 'diyflag_check',
+  16 => 'news',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004878s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002164s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.014399s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_list' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001810s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_list'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001172s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000720s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_news` [ RunTime:0.015618s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` INNER JOIN `yf_menu` `c` ON `a`.`news_columnid`=`c`.`id` WHERE  `news_back` = 0 LIMIT 1 [ RunTime:0.081210s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.*,`c`.`menu_name` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` INNER JOIN `yf_menu` `c` ON `a`.`news_columnid`=`c`.`id` WHERE  `news_back` = 0 ORDER BY news_time desc LIMIT 0,10 [ RunTime:0.015324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.056154s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.006181s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:53:51+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.442429s][吞吐率：2.26req/s] [内存消耗：6,969.59kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003813s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007955s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005722s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002423s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.015374s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001424s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002023s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.014722s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.076014s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000740s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:53:52+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491281632629
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491281632629 [运行时间：0.202080s][吞吐率：4.95req/s] [内存消耗：4,133.91kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491281632629',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003099s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009953s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T12:54:46+08:00 ] ::1 ::1 GET /YFCMF/
+[ log ] localhost/YFCMF/ [运行时间：0.919562s][吞吐率：1.09req/s] [内存消耗：6,746.91kb] [文件加载：85]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002459s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008471s ]
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\wamp\www\YFCMF\app\home\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/home/view/default/\index.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005279s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002223s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_member_list` [ RunTime:0.016354s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_member_list` WHERE  `member_list_id` = 1 LIMIT 1 [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_admin` [ RunTime:0.015206s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_admin` WHERE  `member_id` = 1 LIMIT 1 [ RunTime:0.000923s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_plug_ad` [ RunTime:0.103442s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_plug_ad` WHERE  `plug_ad_l` = 'zh-cn'  AND `plug_ad_open` = 1  AND `plug_ad_adtypeid` = 1 ORDER BY plug_ad_order ASC LIMIT 0,5 [ RunTime:0.008207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_news` [ RunTime:0.015302s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_scontent`,`n_id`,`news_columnid`,`news_img`,`news_pic_allurl` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (3) ORDER BY news_time desc LIMIT 3 [ RunTime:0.008324s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (2) ORDER BY news_time desc LIMIT 6 [ RunTime:0.001556s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_hits`,`news_scontent`,`n_id`,`news_img`,`news_columnid`,`news_time` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (5) ORDER BY news_time desc LIMIT 3 [ RunTime:0.001842s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_scontent`,`news_img`,`news_pic_allurl` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (6) ORDER BY news_time desc LIMIT 8 [ RunTime:0.007374s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_scontent`,`news_source`,`n_id`,`news_img`,`news_columnid` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (6) ORDER BY news_time desc LIMIT 8 [ RunTime:0.001795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_plug_link` [ RunTime:0.036441s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_plug_link` WHERE  `plug_link_l` = 'zh-cn'  AND `plug_link_typeid` = 1  AND `plug_link_open` = 1 ORDER BY plug_link_order ASC [ RunTime:0.000971s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:55:09+08:00 ] ::1 ::1 GET /YFCMF/
+[ log ] localhost/YFCMF/ [运行时间：0.469126s][吞吐率：2.13req/s] [内存消耗：6,361.24kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002923s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008536s ]
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\wamp\www\YFCMF\app\home\controller\Index.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/home/view/default/\index.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005574s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002590s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_member_list` [ RunTime:0.016233s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_member_list` WHERE  `member_list_id` = 1 LIMIT 1 [ RunTime:0.001365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_admin` [ RunTime:0.015886s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_admin` WHERE  `member_id` = 1 LIMIT 1 [ RunTime:0.000880s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_plug_ad` [ RunTime:0.015640s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_plug_ad` WHERE  `plug_ad_l` = 'zh-cn'  AND `plug_ad_open` = 1  AND `plug_ad_adtypeid` = 1 ORDER BY plug_ad_order ASC LIMIT 0,5 [ RunTime:0.001165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_news` [ RunTime:0.016245s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_scontent`,`n_id`,`news_columnid`,`news_img`,`news_pic_allurl` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (3) ORDER BY news_time desc LIMIT 3 [ RunTime:0.008442s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (2) ORDER BY news_time desc LIMIT 6 [ RunTime:0.001376s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_hits`,`news_scontent`,`n_id`,`news_img`,`news_columnid`,`news_time` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (5) ORDER BY news_time desc LIMIT 3 [ RunTime:0.001944s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_scontent`,`news_img`,`news_pic_allurl` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (6) ORDER BY news_time desc LIMIT 8 [ RunTime:0.007688s ]
+[ sql ] [ SQL ] SELECT `news_title`,`news_scontent`,`news_source`,`n_id`,`news_img`,`news_columnid` FROM `yf_news` `a` INNER JOIN `yf_member_list` `b` ON `a`.`news_auto`=`b`.`member_list_id` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (6) ORDER BY news_time desc LIMIT 8 [ RunTime:0.001532s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_plug_link` [ RunTime:0.015520s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_plug_link` WHERE  `plug_link_l` = 'zh-cn'  AND `plug_link_typeid` = 1  AND `plug_link_open` = 1 ORDER BY plug_link_order ASC [ RunTime:0.000996s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:56:53+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.422702s][吞吐率：2.37req/s] [内存消耗：12,325.13kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '16',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => 'style',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.199327s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.010176s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005015s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002304s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.018703s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:5:\"style\";}' , 1491281813) [ RunTime:0.002894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019195s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001833s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001255s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001654s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001716s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016854s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='style' AND manage_id =1 ) [ RunTime:0.000927s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('style' , 1 , 0) [ RunTime:0.001271s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:57:01+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.379894s][吞吐率：2.63req/s] [内存消耗：6,970.80kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.005151s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009278s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005330s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002114s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.015397s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001168s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001911s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001238s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001140s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.014413s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.000787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.013967s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000611s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T12:57:02+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491281821878
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491281821878 [运行时间：0.142706s][吞吐率：7.01req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491281821878',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003158s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008087s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:03:26+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.377451s][吞吐率：2.65req/s] [内存消耗：6,971.53kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002564s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008941s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005455s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002271s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.018257s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001619s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001867s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001196s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015256s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.025168s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000779s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:03:27+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282207001
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282207001 [运行时间：0.141982s][吞吐率：7.04req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282207001',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.004304s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009563s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:03:37+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.452811s][吞吐率：2.21req/s] [内存消耗：12,334.04kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '222',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.215906s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008673s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005834s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002250s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.017059s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:3:\"222\";}' , 1491282217) [ RunTime:0.002200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.021645s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001119s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001097s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001140s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001156s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001338s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001297s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.017729s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='222' AND manage_id =1 ) [ RunTime:0.000897s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('222' , 1 , 0) [ RunTime:0.001184s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000878s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:07:05+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.406535s][吞吐率：2.46req/s] [内存消耗：6,972.90kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002933s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009109s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005544s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002572s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019910s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001285s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001921s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001579s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001649s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.023786s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.018619s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000786s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:07:06+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282426513
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282426513 [运行时间：0.156044s][吞吐率：6.41req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282426513',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003157s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009865s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:07:15+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.446289s][吞吐率：2.24req/s] [内存消耗：12,335.51kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '22',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.213168s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008620s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005553s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003476s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.017385s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:2:\"22\";}' , 1491282435) [ RunTime:0.001744s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017947s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001180s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001486s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001140s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001434s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.017813s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='22' AND manage_id =1 ) [ RunTime:0.001108s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('22' , 1 , 0) [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:07:38+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.424312s][吞吐率：2.36req/s] [内存消耗：6,977.30kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.005846s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.010274s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004990s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002075s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.055919s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001624s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002936s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001552s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.002227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015220s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.014443s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000768s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:07:39+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282459160
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282459160 [运行时间：0.147805s][吞吐率：6.77req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282459160',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.004727s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009661s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:07:49+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.463224s][吞吐率：2.16req/s] [内存消耗：12,334.47kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '15',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '2222',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.230287s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009408s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006259s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002421s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.017814s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:4:\"2222\";}' , 1491282469) [ RunTime:0.002397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019183s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001824s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001105s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001634s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001150s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001555s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016698s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='2222' AND manage_id =1 ) [ RunTime:0.000907s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('2222' , 1 , 0) [ RunTime:0.001378s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000949s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:11:44+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.507156s][吞吐率：1.97req/s] [内存消耗：7,295.05kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002412s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009038s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005771s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012008s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017770s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001296s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001793s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001371s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000765s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015677s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001070s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.014017s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000818s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:11:45+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282704911
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282704911 [运行时间：0.149117s][吞吐率：6.71req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282704911',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002963s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009927s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:11:54+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.479748s][吞吐率：2.08req/s] [内存消耗：12,334.93kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '其味无',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.252766s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008288s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.008089s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005893s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.038501s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:9:\"其味无\";}' , 1491282714) [ RunTime:0.002433s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017546s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001722s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001356s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001179s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001176s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000802s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016330s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='其味无' AND manage_id =1 ) [ RunTime:0.001141s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('其味无' , 1 , 0) [ RunTime:0.000918s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.001180s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:12:43+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.414977s][吞吐率：2.41req/s] [内存消耗：7,296.23kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003120s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008417s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004733s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002348s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019105s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001190s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001835s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001462s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015543s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.000974s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.017043s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000681s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:12:43+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282763635
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282763635 [运行时间：0.150588s][吞吐率：6.64req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282763635',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003199s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009732s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:12:52+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.454803s][吞吐率：2.20req/s] [内存消耗：12,335.13kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '16',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '22222',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.233589s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008272s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006325s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012082s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.019825s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:5:\"22222\";}' , 1491282772) [ RunTime:0.001529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019165s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001090s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001336s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001156s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.002146s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000807s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016070s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='22222' AND manage_id =1 ) [ RunTime:0.000912s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('22222' , 1 , 0) [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000824s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:13:20+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.421448s][吞吐率：2.37req/s] [内存消耗：7,297.13kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002949s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009078s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005176s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002731s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.015240s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001198s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001805s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001211s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.014436s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.000903s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.014773s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000699s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:13:21+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282800856
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282800856 [运行时间：0.148744s][吞吐率：6.72req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282800856',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003148s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.012838s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:13:29+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.455691s][吞吐率：2.19req/s] [内存消耗：12,335.29kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.239164s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007654s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005840s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004306s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.019434s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:1:\"2\";}' , 1491282809) [ RunTime:0.001783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017642s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001105s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001103s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001136s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015351s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='2' AND manage_id =1 ) [ RunTime:0.001026s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('2' , 1 , 0) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000907s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:13:50+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.462389s][吞吐率：2.16req/s] [内存消耗：7,298.27kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003647s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008973s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007552s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002335s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017301s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001162s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001899s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001177s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000716s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015784s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.017453s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000801s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:13:51+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282831285
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282831285 [运行时间：0.143153s][吞吐率：6.99req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282831285',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003195s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.010012s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:14:00+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.455230s][吞吐率：2.20req/s] [内存消耗：12,335.62kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '222222222',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.231831s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008754s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006216s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002480s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.018650s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:9:\"222222222\";}' , 1491282839) [ RunTime:0.002867s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.020682s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001599s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001967s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001111s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015814s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='222222222' AND manage_id =1 ) [ RunTime:0.001107s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('222222222' , 1 , 0) [ RunTime:0.001101s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000843s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:14:37+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.437727s][吞吐率：2.28req/s] [内存消耗：12,327.02kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '222222222',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.214745s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008907s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005165s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002535s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.020719s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:9:\"222222222\";}' , 1491282877) [ RunTime:0.001550s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.022147s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001304s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001518s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001231s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001521s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016783s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='222222222' AND manage_id =1 ) [ RunTime:0.001165s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:14:46+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.453916s][吞吐率：2.20req/s] [内存消耗：12,335.86kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '222委屈',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.219814s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.010477s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005269s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002333s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.019909s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:9:\"222委屈\";}' , 1491282886) [ RunTime:0.001740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.020657s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.002093s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001402s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001686s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001484s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015439s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='222委屈' AND manage_id =1 ) [ RunTime:0.000922s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('222委屈' , 1 , 0) [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000843s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:14:58+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.486792s][吞吐率：2.05req/s] [内存消耗：7,300.65kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003105s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008991s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007861s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012289s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.038630s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001736s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002045s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001482s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.028132s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.018901s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000691s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:14:59+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282899386
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282899386 [运行时间：0.152901s][吞吐率：6.54req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282899386',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003239s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009926s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:15:06+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.456307s][吞吐率：2.19req/s] [内存消耗：12,336.13kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '16',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => 'fddsf',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.232701s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007830s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007248s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002060s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.017563s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:5:\"fddsf\";}' , 1491282906) [ RunTime:0.002358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.016752s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001315s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001767s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001113s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.022938s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='fddsf' AND manage_id =1 ) [ RunTime:0.000956s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('fddsf' , 1 , 0) [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.001293s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:16:13+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.504623s][吞吐率：1.98req/s] [内存消耗：7,301.80kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.004080s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.013867s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.016068s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002482s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.015150s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001195s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002006s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001262s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001544s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.017224s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.016730s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.001275s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:16:14+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282974273
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491282974273 [运行时间：0.146666s][吞吐率：6.82req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491282974273',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003087s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009263s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:16:19+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.460803s][吞吐率：2.17req/s] [内存消耗：12,336.48kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '17',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => 'dsfdsg',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.237348s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007757s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005834s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002049s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.020223s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:6:\"dsfdsg\";}' , 1491282979) [ RunTime:0.002060s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.020096s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001355s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001098s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001193s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001151s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015927s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='dsfdsg' AND manage_id =1 ) [ RunTime:0.000962s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('dsfdsg' , 1 , 0) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000866s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:18:57+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.594652s][吞吐率：1.68req/s] [内存消耗：7,302.84kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_list.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.004021s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.011303s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005693s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003264s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.018135s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.002383s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.002530s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001459s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000829s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.002122s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.017596s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.001240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.016624s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.001134s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:18:58+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491283138615
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491283138615 [运行时间：0.143101s][吞吐率：6.99req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491283138615',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002717s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008989s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:19:03+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.479108s][吞吐率：2.09req/s] [内存消耗：12,336.56kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => 'sad',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.246795s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008578s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007087s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011573s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.023673s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:3:\"sad\";}' , 1491283142) [ RunTime:0.003688s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.020128s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001336s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001595s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001529s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001243s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015345s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='sad' AND manage_id =1 ) [ RunTime:0.001676s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('sad' , 1 , 0) [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000939s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:31:04+08:00 ] ::1 ::1 GET /YFCMF/admin/news/news_add.html
+[ log ] localhost/YFCMF/admin/news/news_add.html [运行时间：0.405882s][吞吐率：2.46req/s] [内存消耗：7,305.27kb] [文件加载：82]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002409s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008568s ]
+[ info ] [ RUN ] app\admin\controller\News->news_add[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ VIEW ] E:\wamp\www\YFCMF/app/admin\view\news\news_add.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'menu',
+  7 => 'news_columnid',
+  8 => 'source',
+  9 => 'diyflag',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004747s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003304s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.023066s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001245s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `yf_auth_rule` ORDER BY level desc,sort [ RunTime:0.001820s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_add'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001228s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = 7 ORDER BY `sort` [ RunTime:0.001377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.014883s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_order = 0 or manage_id = 1 ) [ RunTime:0.000993s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_source` [ RunTime:0.014281s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_source` [ RunTime:0.000801s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:31:05+08:00 ] ::1 ::1 GET /YFCMF/admin/Ueditor/upload?action=config&&noCache=1491283865216
+[ log ] localhost/YFCMF/admin/Ueditor/upload?action=config&&noCache=1491283865216 [运行时间：0.155667s][吞吐率：6.42req/s] [内存消耗：4,133.68kb] [文件加载：63]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Ueditor',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1491283865216',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003343s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.013805s ]
+[ info ] [ RUN ] app\admin\controller\Ueditor->upload[ E:\wamp\www\YFCMF\app\admin\controller\Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-04T13:31:13+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.443147s][吞吐率：2.26req/s] [内存消耗：12,337.30kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '23',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '威威企鹅',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.223204s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008965s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.006181s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.017729s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:12:\"威威企鹅\";}' , 1491283873) [ RunTime:0.001549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.019855s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001207s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001832s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001287s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001728s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.015579s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='威威企鹅' AND manage_id =1 ) [ RunTime:0.000942s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('威威企鹅' , 1 , 0) [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000997s ]
+
+---------------------------------------------------------------
+[ 2017-04-04T13:33:41+08:00 ] ::1 ::1 POST /YFCMF/admin/news/news_flag.html
+[ log ] localhost/YFCMF/admin/news/news_flag.html [运行时间：0.440083s][吞吐率：2.27req/s] [内存消耗：12,337.16kb] [文件加载：96]
+[ info ] [ LANG ] E:\wamp\www\YFCMF\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\wamp\www\YFCMF/app/lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'news_flag',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2979.2 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/YFCMF/admin/news/news_add.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=3320640512; think_var=zh-cn; PHPSESSID=rtk06ikihjtt3g0f5iea7ip3f4; yf_logged_user=7cmKeh7Q3g7I3tksx',
+)
+[ info ] [ PARAM ] array (
+  'creat_flag' => '333333333',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.210651s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.011229s ]
+[ info ] [ RUN ] app\admin\controller\News->news_flag[ E:\wamp\www\YFCMF\app\admin\controller\News.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004897s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003437s ] mysql:dbname=yfcmf;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_web_log` [ RunTime:0.018370s ]
+[ sql ] [ SQL ] INSERT INTO `yf_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 10' , 'Chrome(57.0.2979.2)' , '/YFCMF/admin/news/news_flag.html' , 'admin' , 'News' , 'news_flag' , 'Ajax' , 'a:1:{s:10:\"creat_flag\";s:9:\"333333333\";}' , 1491284021) [ RunTime:0.001755s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_auth_rule` [ RunTime:0.017486s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.002462s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag' ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001787s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.002257s ]
+[ sql ] [ SQL ] SELECT `id` FROM `yf_auth_rule` WHERE  `name` = 'admin/News/news_flag'  AND `status` = 1 ORDER BY level desc,sort LIMIT 1 [ RunTime:0.001282s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `yf_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000919s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_auth_rule` WHERE  `status` = 1  AND `pid` = null ORDER BY `sort` [ RunTime:0.001606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yf_diyflag` [ RunTime:0.016794s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` WHERE  (  diyflag_name='333333333' AND manage_id =1 ) [ RunTime:0.000974s ]
+[ sql ] [ SQL ] INSERT INTO `yf_diyflag` (`diyflag_name` , `manage_id` , `diyflag_order`) VALUES ('333333333' , 1 , 0) [ RunTime:0.001309s ]
+[ sql ] [ SQL ] SELECT * FROM `yf_diyflag` [ RunTime:0.000863s ]
+
+---------------------------------------------------------------
