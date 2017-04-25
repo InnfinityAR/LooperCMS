@@ -59,10 +59,7 @@
 										});
 									}
 								}
-								$("#file0").change(function(){
-									$aa=$(this).val()
-									imgform($aa);
-								});
+								
 							</script>
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-default"  data-dismiss="modal">关闭</button>
@@ -123,12 +120,24 @@
 		});
 	});
 	$('.openmodal').click(function(){
+<<<<<<< HEAD
 		$('#myModal1').modal({
 			keyboard: true
 		})
 
 		$order_id=$(this).find("input").val();
 		alert($order_id);
+=======
+	    $('#myModal1').modal({
+        keyboard: true
+		})
+		
+		
+		
+		$order_id=$(this).find("input").val();
+		
+		
+>>>>>>> origin/looper
 		$.ajax({ //一个Ajax过程
 			type: "post", //以post方式与后台沟通
 			url: "{:url('admin/Music/alertalbumn_list')}", //与此php页面沟通
@@ -159,6 +168,7 @@
 						+'</div>';
 
 				$("#modal-body").html($str);
+<<<<<<< HEAD
 				$("#file0").change(function () {
 					var objUrl = getObjectURL(this.files[0]);
 					// console.log("objUrl = " + objUrl);
@@ -166,6 +176,17 @@
 						$("#img0").attr("src", objUrl);
 					}
 				});
+=======
+				
+				
+				$("#file0").change(function () {
+				var objUrl = getObjectURL(this.files[0]);
+			   // console.log("objUrl = " + objUrl);
+				if (objUrl) {
+					$("#img0").attr("src", objUrl);
+				}
+			});
+>>>>>>> origin/looper
 			}
 		})
 	});
