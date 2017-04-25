@@ -6,7 +6,7 @@
 				{foreach name="menus_child" item="k"}
 				<li>
 					<a href="{:url(''.$k['name'].'')}">
-					<o class="font12 {if condition="$id_curr eq $k['id']"}rigbg{/if}">{$k.title}</o>
+						<o class="font12 {if condition="$id_curr eq $k['id']"}rigbg{/if}">{$k.title}</o>
 					</a>
 					<b class="arrow"></b>
 				</li>

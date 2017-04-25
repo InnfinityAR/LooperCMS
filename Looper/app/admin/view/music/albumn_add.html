@@ -52,7 +52,11 @@
 								indexurl=url.lastIndexOf(".");
 								ss = url.substr(indexurl+1, 3); // 获取子字符串。
 								if(!((ss=="jpg") || (ss=="png"))){
-									alert("请输入正确的图格式为JPG、PNG");
+									layer.alert('必须是png、jpg类型的图片', {
+										skin: 'layui-layer-lan'
+										,closeBtn: 0
+										,anim: 4 //动画类型
+									});
 								}
 							}
 							$("#file0").change(function(){

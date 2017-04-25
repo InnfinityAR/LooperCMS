@@ -24,6 +24,15 @@
 					</div>
 					<div class="space-4"></div>
 					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格主题：  </label>
+						<div class="col-sm-10">
+							{foreach name='theme' item='diyflag'}
+								<input type="radio" name="theme"  value="{$diyflag.diyflag_id}" {if ($diyflag.diyflag_id eq $diyflag_list.pid)}checked {/if}>{$diyflag.diyflag_name}
+							{/foreach}
+						</div>
+					</div>
+					<div class="space-4"></div>
+					<div class="form-group">
 						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 封面图片上传： </label>
 						<div class="col-sm-10">
 							<input type="hidden" name="checkpic" id="checkpic1" value="{$diyflag_list.diyflag_img}" />
@@ -64,7 +73,11 @@
 							indexurl=url.lastIndexOf(".");
 							ss = url.substr(indexurl+1, 3); // 获取子字符串。
 							if(!((ss=="jpg") || (ss=="png"))){
-								alert("请输入正确的图格式为JPG、PNG");
+								layer.alert('必须是png、jpg类型的图片', {
+									skin: 'layui-layer-lan'
+									,closeBtn: 0
+									,anim: 4 //动画类型
+								});
 							}
 						}
 						$("#file1").change(function(){

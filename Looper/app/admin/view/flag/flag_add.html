@@ -14,6 +14,7 @@
 		<div class="row">
 			<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Flag/flag_runadd')}"  enctype="multipart/form-data">
 				<!--//所属栏目改为所属专辑-->
+				<div class="space-4"></div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格名称：  </label>
 						<div class="col-sm-10">
@@ -21,6 +22,15 @@
 						</div>
 					</div>
 					<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格主题：  </label>
+					<div class="col-sm-10">
+						{foreach name='theme' item='diyflag'}
+							<input type="radio" name="theme" value="{$diyflag.diyflag_id}">{$diyflag.diyflag_name}
+						{/foreach}
+					</div>
+				</div>
+				<div class="space-4"></div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格封面上传： </label>
 					<div class="col-sm-10">
@@ -67,7 +77,11 @@
 						indexurl=url.lastIndexOf(".");
 						ss = url.substr(indexurl+1, 3); // 获取子字符串。
 						if(!((ss=="jpg") || (ss=="png"))){
-							alert("请输入正确的图格式为JPG、PNG");
+							layer.alert('必须是png、jpg类型的图片', {
+								skin: 'layui-layer-lan'
+								,closeBtn: 0
+								,anim: 4 //动画类型
+							});
 						}
 					}
 					$("#file1").change(function(){

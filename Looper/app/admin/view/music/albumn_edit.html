@@ -1,166 +1,171 @@
 {extend name="admin@public/base" /}
 {block name="main-content"}
-	<div class="page-content">
-		<!--主题-->
-		<div class="page-header">
-			<h1>
-				您当前操作
-				<small>
-					<i class="ace-icon fa fa-angle-double-right"></i>
-					修改专辑
-				</small>
-			</h1>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Music/albumn_runedit')}"  enctype="multipart/form-data">
-					<input type="hidden" name="n_id" id="n_id" value="{$news_list.albumnid}" />
-					<div class="space-4"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑名称：  </label>
-						<div class="col-sm-10">
-							<input type="text" name="news_title" id="news_title"  value="{$news_list.albumnname}"   class="col-xs-10 col-sm-6" required/>
-						</div>
+<div class="page-content">
+	<!--主题-->
+	<div class="page-header">
+		<h1>
+			您当前操作
+			<small>
+				<i class="ace-icon fa fa-angle-double-right"></i>
+				修改专辑
+			</small>
+		</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Music/albumn_runedit')}"  enctype="multipart/form-data">
+				<input type="hidden" name="n_id" id="n_id" value="{$news_list.albumnid}" />
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑名称：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="news_title" id="news_title"  value="{$news_list.albumnname}"   class="col-xs-10 col-sm-6" required/>
 					</div>
-					<div class="space-4"></div>
-					<!--专辑风格未改数据库之前-->
-					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑属性：  </label>
-						<div class="checkbox">
-							{foreach name='diyflag' item='diyflag'}
-								<label id="news_flag_{$diyflag.diyflag_name}">
-										<input {foreach name='news_flag' item='news_flagv'} {if $news_flagv == $diyflag.diyflag_name}checked{/if}{/foreach} class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="{$diyflag.diyflag_name}" />
-										<span class="lbl"> {$diyflag.diyflag_name}</span>
-								</label>
-							{/foreach}
-						</div>
+				</div>
+				<div class="space-4"></div>
+				<!--专辑风格未改数据库之前-->
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑属性：  </label>
+					<div class="checkbox">
+						{foreach name='diyflag' item='diyflag'}
+						<label id="news_flag_{$diyflag.diyflag_name}">
+							<input {foreach name='news_flag' item='news_flagv'} {if $news_flagv == $diyflag.diyflag_name}checked{/if}{/foreach} class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="{$diyflag.diyflag_name}" />
+							<span class="lbl"> {$diyflag.diyflag_name}</span>
+						</label>
+						{/foreach}
 					</div>
-					<div class="space-4"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 封面图片上传： </label>
-						<div class="col-sm-10">
-							<input type="hidden" name="checkpic" id="checkpic" value="{$news_list.albumncover}" />
-							<input type="hidden" name="oldcheckpic" id="oldcheckpic" value="{$news_list.albumncover}" />
-							<a href="javascript:;" class="file" title="点击选择所要上传的图片">
-								<input type="file" name="pic_one" id="file0" multiple="multiple"/>
-								选择上传文件
-							</a>
-							<span class="lbl">&nbsp;&nbsp;<img src="{$news_list.albumncover|get_imgurl}" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;
-							<a href="javascript:;" onclick="return backpic('{$news_list.albumncover|get_imgurl}');" title="还原修改前的图片" class="file">撤销修改</a>
-						</div>
-						<script type="text/javascript">
-							function imgform(url){
-								indexurl=url.lastIndexOf(".");
-								ss = url.substr(indexurl+1, 3); // 获取子字符串。
-								if(!((ss=="jpg") || (ss=="png"))){
-									alert("请输入正确的图格式为JPG、PNG");
-								}
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 艺人： </label>
+					<input type="text" name="artistname" value="{$news_list.artistname}">
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 封面： </label>
+					<input type="hidden" name="checkpic" id="checkpic" value="{$news_list.albumncover}" />
+					<input type="hidden" name="oldcheckpic" id="oldcheckpic" value="{$news_list.albumncover}" />
+					<span class="lbl">&nbsp;&nbsp;<img src="{$news_list.albumncover|get_imgurl}" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;
+					<a href="javascript:;" class="file" title="点击选择所要上传的图片">
+						<input type="file" name="pic_one" id="file0" multiple="multiple"/>
+						修改封面
+					</a>
+					<script type="text/javascript">
+						function imgform(url){
+							indexurl=url.lastIndexOf(".");
+							ss = url.substr(indexurl+1, 3); // 获取子字符串。
+							if(!((ss=="jpg") || (ss=="png"))){
+								layer.alert('必须是png、jpg类型的图片', {
+									skin: 'layui-layer-lan'
+									,closeBtn: 0
+									,anim: 4 //动画类型
+								});
 							}
-							$("#file0").change(function(){
-								$aa=$(this).val()
-								imgform($aa);
-							});
-						</script>
+						}
+						$("#file0").change(function(){
+							$aa=$(this).val()
+							imgform($aa);
+						});
+					</script>
+				</div>
+				<!--多音乐上传-->
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑封面： </label>
+					<div class="col-sm-10">
+						<span class="btn btn-minier btn-success"  data-toggle="modal" data-target="#myModal">查看已上传的歌单</span>
 					</div>
-		<!--多音乐上传-->
-		<div class="form-group">
-			<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑封面： </label>
-			<div class="col-sm-10">
-				<span class="btn btn-minier btn-success"  data-toggle="modal" data-target="#myModal">查看已上传的歌单</span>
-			</div>
-			<div class="space-4"></div>
-			<link href="__PUBLIC__/ppy/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
-			<script src="__PUBLIC__/ppy/js/fileinput.js" type="text/javascript"></script>
-			<script src="__PUBLIC__/ppy/js/fileinput_locale_zh.js" type="text/javascript"></script>
-			<div class="col-sm-10 col-sm-offset-2" style="padding-top:5px;">
-				<input id="file-5" name="music[]" type="file" class="file"  multiple data-preview-file-type="any" data-upload-url="#" data-preview-file-icon=""><br />
-			</div>
-		</div>
+					<div class="space-4"></div>
+					<link href="__PUBLIC__/ppy/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+					<script src="__PUBLIC__/ppy/js/fileinput.js" type="text/javascript"></script>
+					<script src="__PUBLIC__/ppy/js/fileinput_locale_zh.js" type="text/javascript"></script>
+					<div class="col-sm-10 col-sm-offset-2" style="padding-top:5px;">
+						<input id="file-5" name="music[]" type="file" class="file"  multiple data-preview-file-type="any" data-upload-url="#" data-preview-file-icon=""><br />
+					</div>
+				</div>
 
-		<!--多音乐上传-->
-		<!---->
-		<div class="space-4"></div>
-		<div class="clearfix form-actions">
-			<div class="col-md-offset-3 col-md-9">
-				<button class="btn btn-info" type="submit">
-					<i class="ace-icon fa fa-check bigger-110"></i>
-					保存
-				</button>
-				&nbsp; &nbsp; &nbsp;
-				<button class="btn" type="reset">
-					<i class="ace-icon fa fa-undo bigger-110"></i>
-					重置
-				</button>
-			</div>
-		</div>
-		<!-- 显示模态框（Modal） -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog" style="width:80%">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-								aria-hidden="true">×
+				<!--多音乐上传-->
+				<!---->
+				<div class="space-4"></div>
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button class="btn btn-info" type="submit">
+							<i class="ace-icon fa fa-check bigger-110"></i>
+							保存
 						</button>
-						<h4 class="modal-title" id="myModalLabel">
-							操作已上传的音乐
-						</h4>
+						&nbsp; &nbsp; &nbsp;
+						<button class="btn" type="reset">
+							<i class="ace-icon fa fa-undo bigger-110"></i>
+							重置
+						</button>
 					</div>
-					<div class="modal-body">
-						<div class="row">
-							<div class="col-xs-12">
-								<div class="form-group">
-									<div class="col-sm-12">
-										<ul>
-											{volist name="pic_list" id="v"}
-												<div class="file-preview-frame" data-fileindex="0" id="id{$i}" style="width: 300px;">
-													<audio controls="" style="width: 100%;" >
-														<source src="{$v.path|get_imgurl}" type="audio/mp3">
-														<div class="file-preview-other"></div>
-													</audio>
-													<div class="file-actions">
-														<div class="file-footer-buttons">
-															<a class="red" href="javascript:;" onclick="return delall({$i},'{$v.path}');" title="回收站">
-																<i class="ace-icon fa fa-trash-o bigger-130"></i>
-															</a>
+				</div>
+				<!-- 显示模态框（Modal） -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog" style="width:80%">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">×
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+									操作已上传的音乐
+								</h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="form-group">
+											<div class="col-sm-12">
+												<ul>
+													{volist name="pic_list" id="v"}
+													<div class="file-preview-frame" data-fileindex="0" id="id{$i}" style="width: 300px;">
+														<audio controls="" style="width: 100%;" >
+															<source src="{$v.path|get_imgurl}" type="audio/mp3">
+															<div class="file-preview-other"></div>
+														</audio>
+														<div class="file-actions">
+															<div class="file-footer-buttons">
+																<a class="red" href="javascript:;" onclick="return delall({$i},'{$v.path}');" title="回收站">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+															<div class="clearfix"></div>
 														</div>
-														<div class="clearfix"></div>
+														<h5>{$v.filename}</h5>
 													</div>
-													<h5>{$v.filename}</h5>
-												</div>
-											{/volist}
-										</ul>
+													{/volist}
+												</ul>
+											</div>
+										</div>
+										<div class="space-4"></div>
 									</div>
 								</div>
-								<div class="space-4"></div>
 							</div>
+							<div class="modal-footer"></div>
 						</div>
 					</div>
-					<div class="modal-footer"></div>
 				</div>
-			</div>
+			</form>
 		</div>
-				</form>
-			</div>
-		</div>
-{/block}
-{block name="scripts"}
+	</div>
+	{/block}
+	{block name="scripts"}
 	<script>
-        if(!$("#news_flag_vaj").attr("checked")){
-            $("#pptaddress").hide();
-        }
-        $("#news_flag_vaj").click(function(){
-            $("#pptaddress").toggle(400);
-        });
-        if(!$("#news_flag_vacp").attr("checked")){
-            $("#cpprice").hide();
-        }
-        $("#news_flag_vacp").click(function(){
-            $("#cpprice").toggle(400);
-        });
+		if(!$("#news_flag_vaj").attr("checked")){
+			$("#pptaddress").hide();
+		}
+		$("#news_flag_vaj").click(function(){
+			$("#pptaddress").toggle(400);
+		});
+		if(!$("#news_flag_vacp").attr("checked")){
+			$("#cpprice").hide();
+		}
+		$("#news_flag_vacp").click(function(){
+			$("#cpprice").toggle(400);
+		});
 		$('.date-picker').datepicker({
-				autoclose: true,
-				todayHighlight: true,
-				language:'zh-CN',
-			})
+			autoclose: true,
+			todayHighlight: true,
+			language:'zh-CN',
+		})
 	</script>
-{/block}
+	{/block}

@@ -58,4 +58,22 @@ class Base extends Common
 		return $music;
 
 	}
+	/*
+	 *获取专辑封面
+	 */
+	public function albumn_cover($music_name) {
+		$file_contents = file_get_contents("http://musicmini.baidu.com/app/search/searchList.php?qword={$music_name}&ie=utf-8");
+		$preg='/<th[^>]*>[\s\S]*?<\/th>/';
+		preg_match_all($preg,$file_contents,$arr);//获取tr
+		$preg='/id=[\"]\w+[\"]/';
+		preg_match_all($preg,$arr[0][2],$int);//获取id="";
+		preg_match('/\d+/',$int[0][0],$newNum);//获取纯ID
+		$musid= $newNum[0];//获取音乐中的ID；
+		$file_contents=file_get_contents("http://music.baidu.com/data/music/links?songIds=$musid");
+		$aa=json_decode($file_contents,true);
+		$music_pic=$aa["data"]["songList"][0]["songPicBig"];//缩略图
+		//$music_pic=strtok($music_pic, "@");echo $music_pic; //原图
+//		echo "<img src=".$music_pic.">";
+		return $music_pic;
+	}
 }

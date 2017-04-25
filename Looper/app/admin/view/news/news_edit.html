@@ -20,7 +20,6 @@
 						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop名称：  </label>
 						<div class="col-sm-10">
 							<input type="text" name="news_title" id="news_title"  value="{$news_list.news_title}"   class="col-xs-10 col-sm-6" required/>
-							<input type="text" name="news_titleshort" id="news_titleshort"  value="{$news_list.news_titleshort}" placeholder="简短标题，建议6~12字数" class="col-xs-10 col-sm-4" style="margin-left:10px;" />
 								<span class="help-inline col-xs-12 col-sm-7">
 									<span class="middle" id="resone"></span>
 								</span>
@@ -37,41 +36,57 @@
 										<span class="lbl"> {$diyflag.diyflag_name}</span>
 								</label>
 							{/foreach}
+						</div>
 							<b style="float: right;" id="aa">自定义风格</b>
 							<script>
 								$("#aa").click(function(){
-									var $input=prompt("请输入要增加的风格","");
-									if ($input !=""){
-										if($input.length<1 || $input.length>20){
-											alert("风格名称应该在1——20之间");
-										}else {
-											$.ajax({ //一个Ajax过程
-												type: "post", //以post方式与后台沟通
-												url : "{:url('admin/News/news_flag')}", //与此php页面沟通
-												dataType:'json',//从php返回的值以 JSON方式 解释
-												data: 'creat_flag='+$input ,//发给php的数据
-												success: function(date){
-													var $str="";
-													$("#auto_flag").html("");
-													for(i=0;i<date.length;i++){
-														$str+='<label id="news_flag_'+date[i]["diyflag_name"]+'"><input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="'+date[i]["diyflag_name"]+'" /><span class="lbl">'+date[i]["diyflag_name"]+'</span></label>';
+									var $input="";
+									layer.prompt({title: '请输入要创建的风格'}, function(text, index){
+										$input=text;
+										if ($input !=""){
+											if($input.length<1 || $input.length>20){
+												layer.alert('风格名称应该在1——20之间', {
+													skin: 'layui-layer-lan'
+													,closeBtn: 0
+													,anim: 4 //动画类型
+												});
+											}else {
+												$.ajax({ //一个Ajax过程
+													type: "post", //以post方式与后台沟通
+													url : "{:url('admin/News/news_flag')}", //与此php页面沟通
+													dataType:'json',//从php返回的值以 JSON方式 解释
+													data: 'creat_flag='+$input ,//发给php的数据
+													success: function(date){
+														var $str="";
+														$("#auto_flag").html("");
+														for(i=0;i<date.length;i++){
+															$str+='<label id="news_flag_'+date[i]["diyflag_name"]+'"><input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="'+date[i]["diyflag_name"]+'" /><span class="lbl">'+date[i]["diyflag_name"]+'</span></label>';
+														}
+														$("#auto_flag").html($str);
+														layer.msg('创建成功请在上栏选择', {
+															offset: 't',
+															anim: 6
+														});
 													}
-													$("#auto_flag").html($str);
-													alert("创建成功请在上栏选择");
-												}
+												});
+											}
+										}else {
+											layer.alert('风格名称不能为空', {
+												skin: 'layui-layer-lan'
+												,closeBtn: 0
+												,anim: 4 //动画类型
 											});
 										}
-									}else {
-										alert("风格名称不能为空");
-									}
+										layer.close(index);
+									});
 								})
 							</script>
-						</div>
+
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop关键字：  </label>
+						<!--<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop关键字：  </label>-->
 						<div class="col-sm-10">
-							<input type="text" name="news_key" id="news_key"  value="{$news_list.news_key}"  placeholder="输入Loop关键字，以英文,逗号隔开" class="col-xs-10 col-sm-6" />
+							<input type="hidden" name="news_key" id="news_key"  value="{$news_list.news_key}"  placeholder="输入Loop关键字，以英文,逗号隔开" class="col-xs-10 col-sm-6" />
 						</div>
 					</div>
 					<div class="space-4"></div>
@@ -99,9 +114,6 @@
 								选择上传文件
 							</a>
 							<span class="lbl">&nbsp;&nbsp;<img src="{$news_list.news_img|get_imgurl}" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;
-							<a href="javascript:;" onclick="return backpic('{$news_list.news_img|get_imgurl}');" title="还原修改前的图片" class="file">
-								撤销修改
-							</a>
 							<span class="lbl">&nbsp;&nbsp;上传前先用PS处理成等比例图片后上传，默认比例100*70、600*420、800*560像素<br /></span>
 						</div>
 					</div>
@@ -110,7 +122,11 @@
 							indexurl=url.lastIndexOf(".");
 							ss = url.substr(indexurl+1, 3); // 获取子字符串。
 							if(!((ss=="jpg") || (ss=="png"))){
-								alert("请输入正确的图格式为JPG、PNG");
+								layer.alert('必须是png、jpg类型的图片', {
+									skin: 'layui-layer-lan'
+									,closeBtn: 0
+									,anim: 4 //动画类型
+								});
 							}
 						}
 						$("#file0").change(function(){
@@ -137,7 +153,7 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop图集： </label>
 						<div class="col-sm-10">
-							<span class="btn btn-minier btn-success"  data-toggle="modal" data-target="#myModal">查看已上传的图片</span>
+							<span class="btn btn-minier btn-success"  data-toggle="modal" data-target="#myModal">查看已上传的音乐</span>
 						</div>
 						<div class="space-4"></div>
 						<link href="__PUBLIC__/ppy/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
@@ -150,7 +166,7 @@
 					<div class="space-4"></div>
 					<div class="form-group" >
 						<div class="col-sm-10">
-							<div id="test11" width="500px" style="margin-left: 200px;">
+							<div id="test11" width="700px" style="margin-left: 200px;">
 							</div>
 						</div>
 					</div>
@@ -260,7 +276,8 @@
 {/block}
 {block name="scripts"}
 	<script>
-		$("#file-5").on('change', function(event) {
+		$('#file-5').on('filebatchselected', function(event, files) {
+
 			var oMyForm = new FormData();
 			for(i=0;i<$('#file-5')[0].files.length;i++){
 				oMyForm.append("file"+i, $('#file-5')[0].files[i]);
@@ -291,16 +308,19 @@
 				success: function(data){
 					$str="";
 					$("#test11").html($str);
-					$str='<table><tr><td>音乐名称</td><td width="200" align="center">排序</td><td>操作</td></tr>'
+					$str='<table  border="1px" style="border: 1px solid #00a0e9;"><tr><td>封面</td><td>歌手</td><td>所属专辑</td><td>音乐名称</td><td width="200" align="center">排序</td><td>操作</td></tr>'
 					for(i=0;i<data.length;i++){
-						$str+='<tr height="40"><td>'+data[i]["filename"]+'</td>';
-						$str+='<td width="200" align="center"><input type="hidden" name="order_id" value='+data[i]["order_id"]+'><img src="/YFCMF/public/img/up.png"><img src="/YFCMF/public/img/down.png"></td>';
-						$str+='<td><input type="hidden" name="music_id" value='+data[i]["id"]+'><span name="del">删除</span></td></tr>';
+						$str+='<tr height="40"><td><img style="width: 40px; height: auto;" src="'+data[i]["music_cover"]+'"></td>';
+						$str+='<td>'+data[i]["artist"]+'</td>';
+						$str+='<td>'+data[i]["albumtitle"]+'</td>';
+						$str+='<td>'+data[i]["filename"]+'</td>';
+						$str+='<td width="200" align="center"><input type="hidden" name="order_id" value='+data[i]["order_id"]+'><img src="/Looper/public/img/up.png"><img src="/Looper/public/img/down.png"></td>';
+						$str+='<td><input type="hidden" name="music_id" value='+data[i]["id"]+'><button type="button" name="del">删除</button></td></tr>';
 					}
 					$str+='</table>';
 					$("#test11").html($str);
 					$("#ms").val("");
-					$('[src="/YFCMF/public/img/up.png"]').on('click',(function(){
+					$('[src="/Looper/public/img/up.png"]').on('click',(function(){
 						$order_id=$(this).prev().val();
 						$id=$(this).parents("td").next().children("input").val();
 						$.ajax({ //一个Ajax过程
@@ -313,7 +333,7 @@
 							}
 						});
 					}));
-					$('[src="/YFCMF/public/img/down.png"]').on('click',(function(){
+					$('[src="/Looper/public/img/down.png"]').on('click',(function(){
 						$order_id=$(this).prev().prev().val();
 						$id=$(this).parents("td").next().children("input").val();
 						$.ajax({ //一个Ajax过程
@@ -334,7 +354,7 @@
 							dataType: 'json',//从php返回的值以 JSON方式 解释
 							data: 'id=' + $id,//发给php的数据
 							success: function (data) {
-								alert("删除成功");
+								layer.msg('删除成功');
 								$('#ms').change();
 							}
 						});

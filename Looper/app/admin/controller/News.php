@@ -61,10 +61,14 @@ class News extends Base
 				$filename=$_FILES["file" . $i]["name"];
 				$size=$_FILES["file" . $i]["size"];
 				$fileType = strrchr($filename, '.');
+				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') ;
+					if (!file_exists($path)){
+						mkdir ($path);
+					}
 				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .$filename;
 				$move_file = move_uploaded_file($file, $path);
 				if ($move_file) {
-					$path=str_replace(ROOT_PATH ,"/",$path);
+					$path=str_replace(ROOT_PATH ."/","/",$path);
 					$music_url = $path;
 					//写入数据库
 					$music = $this->music_header($music_url);
@@ -72,19 +76,23 @@ class News extends Base
 					$data1['year'] = $music['Year'];
 					$data1['albumtitle'] = $music['AlbumTitle'];
 					$data1['filename'] = $music['Title'];
+					$albumncover =$this->albumn_cover($music['Title']);
+					if($albumncover){
+						$data1['music_cover']=$albumncover;
+					}
 					$data1['flag_name'] = $music['Genre'];
 					$data1['copyright'] = $music['Copyright'];
 					$data1['description'] = $music['Description'];
 					$data1["fileext"] = $fileType;
-					$data1['uptime'] = date("y-m-d h:i:s", time());
+					$data1['uptime'] = date("Y-m-d H:i:s", time());
 					$data1['filesize'] = $size;
 					$data1['path'] = $music_url;
 					$fileid=Db::name('plug_files')->insertGetId($data1);
 					if($fileid) {
 						$music_add = array(
-							'fileid' => $fileid,
+							'fileid' =>intval($fileid),
 							'loopid' =>0,
-							'creationdate' => date("y-m-d h:i:s", time()),
+							'creationdate' => date("Y-m-d H:i:s", time()),
 							'userid' => $userid,
 							'order_id'=>$i,
 						);
@@ -97,9 +105,9 @@ class News extends Base
 			$fileid = input('fileid');
 			if (is_int($fileid)) {
 				$music_add = array(
-					'fileid' => $fileid,
+					'fileid' =>intval($fileid),
 					'loopid' =>0,
-					'creationdate' => date("y-m-d h:i:s", time()),
+					'creationdate' => date("Y-m-d H:i:s", time()),
 					'userid' => $userid,
 					'order_id'=>1,
 				);
@@ -109,12 +117,14 @@ class News extends Base
 				$fileid_list = explode(",", "$fileid");
 				$i=0;
 				foreach ($fileid_list as $fileid) {
-					$i+=1;
-					$music_add['fileid'] = $fileid;
-					$music_add['userid'] = $userid;
-					$music_add['order_id']=$i;
-					$music_add['creationdate'] = date("y-m-d h:i:s", time());
-					$select_music = Db::name('loop_music')->where("fileid=$fileid and loopid=0 and userid=$userid")->select();
+					if(!empty($fileid)){
+						$i+=1;
+						$music_add['fileid'] =intval($fileid);
+						$music_add['userid'] = $userid;
+						$music_add['order_id']=$i;
+						$music_add['creationdate'] = date("Y-m-d H:i:s", time());
+						$select_music = Db::name('loop_music')->where("fileid=$fileid and loopid=0 and userid=$userid")->select();
+					}
 					if (!$select_music) {
 						Db::name('loop_music')->insertGetId($music_add);
 					}
@@ -122,7 +132,7 @@ class News extends Base
 			}
 		}
 			Db::name('loop_music')->where("fileid=0")->delete();
-			$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.filename,b.artist")
+			$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.albumtitle,b.music_cover,b.filename,b.artist")
 				->join(config('database.prefix').'plug_files b','a.fileid =b.id')
 				->where("loopid=0 and userid=$userid")->order("order_id desc")->select();
 			echo json_encode($news_flag,JSON_UNESCAPED_UNICODE);
@@ -136,10 +146,14 @@ class News extends Base
 				$filename=$_FILES["file" . $i]["name"];
 				$size=$_FILES["file" . $i]["size"];
 				$fileType = strrchr($filename, '.');
+				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') ;
+				if (!file_exists($path)){
+					mkdir ($path);
+				}
 				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .$filename;
 				$move_file = move_uploaded_file($file, $path);
 				if ($move_file) {
-					$path=str_replace( ROOT_PATH ,"/",$path);
+					$path=str_replace(ROOT_PATH ."/","/",$path);
 					$music_url = $path;
 					//写入数据库
 					$music = $this->music_header($music_url);
@@ -148,18 +162,22 @@ class News extends Base
 					$data1['albumtitle'] = $music['AlbumTitle'];
 					$data1['filename'] = $music['Title'];
 					$data1['flag_name'] = $music['Genre'];
+					$albumncover =$this->albumn_cover($music['Title']);
+					if($albumncover){
+						$data1['music_cover']=$albumncover;
+					}
 					$data1['copyright'] = $music['Copyright'];
 					$data1['description'] = $music['Description'];
 					$data1["fileext"] = $fileType;
-					$data1['uptime'] = date("y-m-d h:i:s", time());
+					$data1['uptime'] = date("Y-m-d H:i:s", time());
 					$data1['filesize'] = $size;
 					$data1['path'] = $music_url;
 					$fileid=Db::name('plug_files')->insertGetId($data1);
 					if($fileid) {
 						$music_add = array(
-							'fileid' => $fileid,
+							'fileid' =>intval($fileid),
 							'loopid' =>0,
-							'creationdate' => date("y-m-d h:i:s", time()),
+							'creationdate' => date("Y-m-d H:i:s", time()),
 							'userid' => $userid,
 							'order_id'=>$i,
 						);
@@ -172,9 +190,9 @@ class News extends Base
 			$fileid = input('fileid');
 			if (is_int($fileid)) {
 				$music_add = array(
-					'fileid' => $fileid,
+					'fileid' =>intval($fileid),
 					'loopid' =>0,
-					'creationdate' => date("y-m-d h:i:s", time()),
+					'creationdate' => date("Y-m-d H:i:s", time()),
 					'userid' => $userid,
 					'order_id'=>1,
 				);
@@ -185,10 +203,10 @@ class News extends Base
 				$i=0;
 				foreach ($fileid_list as $fileid) {
 					$i+=1;
-					$music_add['fileid'] = $fileid;
+					$music_add['fileid'] =intval($fileid);
 					$music_add['userid'] = $userid;
 					$music_add['order_id']=$i;
-					$music_add['creationdate'] = date("y-m-d h:i:s", time());
+					$music_add['creationdate'] = date("Y-m-d H:i:s", time());
 					$select_music = Db::name('loop_music')->where("fileid=$fileid and loopid=0 and userid=$userid")->select();
 					if (!$select_music) {
 						Db::name('loop_music')->insertGetId($music_add);
@@ -197,9 +215,9 @@ class News extends Base
 			}
 		}
 		Db::name('loop_music')->where("fileid=0")->delete();
-		$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.filename,b.artist")
+		$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.albumtitle,b.music_cover,b.filename,b.artist")
 			->join(config('database.prefix').'plug_files b','a.fileid =b.id')
-			->where("(loopid=0 and userid=$userid) or loopid=$loopid")->order("order_id desc")->select();
+			->where("loopid=0 and userid=$userid")->order("order_id desc")->select();
 		echo json_encode($news_flag,JSON_UNESCAPED_UNICODE);
 	}
 	/*
@@ -223,12 +241,13 @@ class News extends Base
 				'diyflag_name'=>$diyflag_name,
 				'manage_id'=>$manage_id,
 				'diyflag_order'=>$diyflag_order,
-				'creatdata'=>date("y-m-d h:i:s",time()),
+				'creatdata'=>date("Y-m-d H:i:s",time()),
+				'pid'=>-1,
 			);
 			$diyflag_rusult=Db::name('diyflag')->insert($sl_data);
 			//Diyflag::create($sl_data);
 			if($diyflag_rusult){
-				$diyflag_list=Db::name('diyflag')->select();
+				$diyflag_list=Db::name('diyflag')->where("pid!=0")->select();
 				echo json_encode($diyflag_list,JSON_UNESCAPED_UNICODE);
 			}
 		}
@@ -241,49 +260,35 @@ class News extends Base
 	{
 		$keytype=input('keytype','news_title');
 		$key=input('key');
-		$news_l=input('news_l');
 		$opentype_check=input('opentype_check','');
-		$news_columnid=input('news_columnid','');
 		$diyflag=input('diyflag','');
 		//查询：时间格式过滤 获取格式 2015-11-12 - 2015-11-18
 		$sldate=input('reservation','');
-
 		$arr = explode(" - ",$sldate);
         if(count($arr)==2){
-            $arrdateone=strtotime($arr[0]);
-            $arrdatetwo=strtotime($arr[1].' 23:55:55');
+            $arrdateone=$arr[0];
+            $arrdatetwo=$arr[1];
             $map['news_time'] = array(array('egt',$arrdateone),array('elt',$arrdatetwo),'AND');
-        }
+		}
 		//map架构查询条件数组
 		$map['news_back']= 0;
 		if(!empty($key)){
-			if($keytype=='news_title'){
-				$map[$keytype]= array('like',"%".$key."%");
-			}elseif($keytype=='news_author'){
-				$map['member_list_username']= array('like',"%".$key."%");
-			}else{
-				$map[$keytype]= $key;
-			}
-		}
-		if ($opentype_check!=''){
-			$map['news_open']= array('eq',$opentype_check);
-		}
-		if (!empty($news_l)){
-			$map['news_l']= array('eq',$news_l);
-		}
-        if(!config('lang_switch_on')){
-            $map['news_l']=  $this->lang;
-        }
-		if ($news_columnid!=''){
-			$ids=get_menu_byid($news_columnid,1,2);
-			$map['news_columnid']= array('in',implode(",", $ids));
+			$map['news_title']= array('like',"%".$key."%");
 		}
 		$where=$diyflag?"FIND_IN_SET('$diyflag',news_flag)":'';
 		$news_model=new NewsModel;
-		$news=$news_model->alias("a")->field('a.*,b.*')
-				->join(config('database.prefix').'member_list b','a.news_auto =b.member_list_id')
-				->where($map)->where($where)->order('news_time desc')->paginate(config('paginate.list_rows'),false,['query'=>get_query()]);
-		$show = $news->render();
+		$con=input('con');
+		if($con) {
+			$news = $news_model->alias("a")->field('a.*,b.*')
+				->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
+				->where($map)->where($where)->order("$con desc")->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
+		}else{
+			$news = $news_model->alias("a")->field('a.*,b.*')
+				->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
+				->where($map)->where($where)->order('news_time desc')->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
+
+		}
+			$show = $news->render();
 		$show=preg_replace("(<a[^>]*page[=|/](\d+).+?>(.+?)<\/a>)","<a href='javascript:ajax_page($1);'>$2</a>",$show);
 		$this->assign('page',$show);
 		//Loop属性数据
@@ -336,7 +341,6 @@ class News extends Base
      * 添加操作
 	 *
      */
-
 	public function news_runadd()
 	{
 		if (!request()->isAjax()){
@@ -386,7 +390,7 @@ class News extends Base
 					if ($info) {
 						$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
 						//写入数据库
-						$data['uptime'] = date("y-m-d h:i:s",time());
+						$data['uptime'] = date("Y-m-d H:i:s",time());
 						$data['filesize'] = $info->getSize();
 						$data['path'] = $img_url;
 						Db::name('plug_files')->insert($data);
@@ -402,7 +406,7 @@ class News extends Base
 						if ($info) {
 							$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
 							//写入数据库
-							$data['uptime'] = date("y-m-d h:i:s",time());
+							$data['uptime'] = date("Y-m-d H:i:s",time());
 							$data['filesize'] = $info->getSize();
 							$data['path'] = $img_url;
 							Db::name('plug_files')->insert($data);
@@ -433,7 +437,7 @@ class News extends Base
 			'news_key'=>input('news_key',''),
 			'news_tag'=>input('news_tag',''),
 			'news_source'=>input('news_source',''),
-			'news_time'=>date("y-m-d h:i:s",time()),
+			'news_time'=>date("Y-m-d H:i:s",time()),
 			'news_pic_content'=>input('news_pic_content',''),
 			'news_open'=>input('news_open',0),
 			'news_scontent'=>input('news_scontent',''),
@@ -498,7 +502,6 @@ class News extends Base
 			$albumnname=$v["albumnname"];
 			$music_list["$albumnname"] = Db::name('loop_ablumn')->alias("a")->field('a.albumnid,a.albumnname,b.filename,b.id')
 				->join(config('database.prefix') . 'plug_files b', 'a.albumnid =b.albumnid')->where("a.albumnid=$albumnid")->select();
-
 		}
 		$this->assign('music_list',$music_list);
 		$news_list=NewsModel::get($n_id);
@@ -511,7 +514,7 @@ class News extends Base
 		//栏目数据
 		$menu_text=menu_text($this->lang);
 		$this->assign('menu',$menu_text);
-		$diyflag=Db::name('diyflag')->select();//风格
+		$diyflag=Db::name('diyflag')->where("pid!=0")->select();//风格
 		$source=Db::name('source')->select();//来源
 		$news_flag=Db::name('news')->field('news_flag')->where("n_id=$n_id")->select();
 		$news_listarr = explode(",", $news_flag[0]['news_flag']);//用于遍历出所有的已选中的风格
@@ -575,7 +578,7 @@ class News extends Base
 					if ($info) {
 						$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
 						//写入数据库
-						$data['uptime'] = date("y-m-d h:i:s",time());
+						$data['uptime'] = date("Y-m-d H:i:s",time());
 						$data['filesize'] = $info->getSize();
 						$data['path'] = $img_url;
 						Db::name('plug_files')->insert($data);
@@ -591,7 +594,7 @@ class News extends Base
 						if ($info) {
 							$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
 							//写入数据库
-							$data['uptime'] = date("y-m-d h:i:s",time());
+							$data['uptime'] = date("Y-m-d H:i:s",time());
 							$data['filesize'] = $info->getSize();
 							$data['path'] = $img_url;
 							Db::name('plug_files')->insert($data);
