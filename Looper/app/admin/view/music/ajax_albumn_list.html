@@ -1,0 +1,256 @@
+{foreach name="news" item="v"}
+<tr style="text-align: center; vertical-align: middle;">
+	<td class="hidden-xs center" >{$v.albumnid}</td>
+	<td ><a href="{:url('admin/Music/albumn_edit',array('albumnid'=>$v['albumnid']))}" title="{$v.albumncover}"><img src="{$v.albumncover|get_imgurl}" style="width: 100px; height: auto;"></a></td>
+	<td style="vertical-align: middle;position: relative; " >
+		<input type="hidden" value="{$v['artistname']}" name="albumn_ID">
+		<button type="button" name="artistname">{$v.artistname|subtext=25}</button>
+		<div name="albumn_list" style=" overflow: auto; background-color: #fff;text-align: center;">
+		</div>
+	</td>
+	<td style="vertical-align: middle;position: relative; " >
+		<input type="hidden" value="{$v['albumnid']}" name="albumn_ID">
+		<button type="button" name="albumnname">{$v.albumnname|subtext=25}</button>
+		<div style="float: right;text-align: left;">
+			<link href="__PUBLIC__/ppy/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+			<script src="__PUBLIC__/ppy/js/fileinput.js" type="text/javascript"></script>
+			<script src="__PUBLIC__/ppy/js/fileinput_locale_zh.js" type="text/javascript"></script>
+			<div class="form-group" id="pic_list" style=" float: left;">
+				<div class="col-sm-10 col-sm-offset-2" style="padding-top:5px;">
+					<input id="file-{$v['albumnid']}" name="pic_list[]" type="file"  class="file" multiple data-preview-file-type="any" data-upload-url="#" data-preview-file-icon="">
+					<input type="hidden"  name="test" value="{$v['albumnid']}">
+				</div>
+			</div>
+		</div>
+		</div>
+		<div name="music_list" style=" overflow: auto; background-color: #fff; width: 170px; text-align: center;">
+		</div>
+	</td>
+	<!--专辑风格-->
+	<td class="hidden-sm hidden-xs" >
+		<span style="color:#03C">{$v['albumnstyle']}</span>
+	</td>
+	<td class="hidden-xs" >{$v.creationdate}</td>
+	<td >
+		<div class="hidden-sm hidden-xs action-buttons">
+			<a class="btn btn-primary btn-lg openmodal">
+				<input type="hidden" value="{$v['albumnid']}" name="albumnid">
+				<span><i class="ace-icon fa fa-pencil bigger-130"></i></span>
+			</a>
+			<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Music/albumn_runedit')}"  enctype="multipart/form-data">
+				<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="myModalLabel">专辑修改</h4>
+							</div>
+							<div class="modal-body" id="modal-body">
+							</div>
+							<script type="text/javascript">
+								function imgform(url){
+									indexurl=url.lastIndexOf(".");
+									ss = url.substr(indexurl+1, 3); // 获取子字符串。
+									if(!((ss=="jpg") || (ss=="png"))){
+										layer.alert('必须是png、jpg类型的图片', {
+											skin: 'layui-layer-lan'
+											,closeBtn: 0
+											,anim: 4 //动画类型
+										});
+									}
+								}
+								$("#file0").change(function(){
+									$aa=$(this).val()
+									imgform($aa);
+								});
+							</script>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-default"  data-dismiss="modal">关闭</button>
+								<button type="submit" class="btn btn-primary" id="btn-default" data-dismiss="modal">提交更改</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal -->
+				</div>
+			</form>
+		</div>
+		<a class="red confirm-rst-url-btn" data-info="你确定要删除吗？" href="{:url('admin/Music/albumn_del',array('albumnid'=>$v['albumnid'],'p'=>input('p',1)))}" title="回收站" data-toggle="tooltip">
+			<i class="ace-icon fa fa-trash-o bigger-130"></i>
+		</a>
+	</td>
+</tr>
+{/foreach}
+<tr>
+	<td colspan="2" align="left"class="hidden-lg hidden-md hidden-sm">{$page}</td>
+	<td colspan="8" align="right" class="hidden-xs">{$page}</td>
+</tr>
+<script src="__PUBLIC__/yfcmf/yfcmf.js" type="text/javascript"></script>
+<script>
+	$('[type="file"]').on('filebatchselected', function(event, files) {
+		$order_id=$(this).parents("td").children().first().val();
+		var oMyForm = new FormData();
+		for(i=0;i<$(this)[0].files.length;i++){
+			oMyForm.append("file"+i, $(this)[0].files[i]);
+		}
+		$.ajax({ //一个Ajax过程
+			url : "{:url('admin/Music/music_upload')}", //与此php页面沟通
+			type: 'GET',
+			cache: false,
+			data: "id="+$order_id,
+			processData: false,
+			contentType: false,
+			async: false,
+			dataType:'json',
+			success: function(data){
+				$.ajax({ //一个Ajax过程
+					url : "{:url('admin/Music/music_upload')}", //与此php页面沟通
+					type: 'post',
+					cache: false,
+					data: oMyForm,
+					processData: false,
+					contentType: false,
+					async: false,
+					dataType:'json',
+					success: function(data1){
+						layer.alert('上传成功', {
+							skin: 'layui-layer-lan',
+							closeBtn: 0,
+							anim: 4 //动画类型
+						});
+						window.location = "{:url('admin/Music/albumn_list')}"
+					}
+				});
+			}
+		});
+	});
+	$('.openmodal').click(function(){
+		$('#myModal1').modal({
+			keyboard: true
+		})
+
+		$order_id=$(this).find("input").val();
+		alert($order_id);
+		$.ajax({ //一个Ajax过程
+			type: "post", //以post方式与后台沟通
+			url: "{:url('admin/Music/alertalbumn_list')}", //与此php页面沟通
+			dataType: 'json',//从php返回的值以 JSON方式 解释
+			data: "albumnid="+$order_id,//发给php的数据
+			success: function (data) {
+				$("#modal-body").html("");
+				var $str="";
+				$str+= '<input type="hidden" name="n_id" id="n_id" value="'+data[0]["albumnid"]+'" />'
+						+'<div class="form-group">'
+						+'<sapn>艺人：</sapn>'
+						+'<input type="text" name="artistname1" size="50" value="'+data[0]["artistname"]+'" >'
+						+'</div>'
+						+'<div class="form-group">'
+						+'<span> 名称：</span>'
+						+'<input type="text" name="albumnname1"  size="50" value="'+data[0]["albumnname"]+'"/>'
+						+'</div>'
+						+'<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑属性:</label>'
+				$str+='<div class="form-group">'
+						+'<span > 封面：</span>'
+						+'<input type="hidden" name="checkpic" id="checkpic" value="'+data[0]["albumncover"]+'" />'
+						+'<input type="hidden" name="oldcheckpic" id="oldcheckpic" value="'+data[0]["albumncover"]+'" />'
+						+'<a href="javascript:;" class="file" title="点击选择所要上传的图片">'
+						+'<input type="file" name="pic_one" id="file0" multiple="multiple"/>修改封面'
+						+'</a>'
+						+'<span class="lbl">&nbsp;&nbsp;<img src="'+data[0]["albumncover"]+'" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;'
+						+'</div>';
+						+'</div>';
+
+				$("#modal-body").html($str);
+				$("#file0").change(function () {
+					var objUrl = getObjectURL(this.files[0]);
+					// console.log("objUrl = " + objUrl);
+					if (objUrl) {
+						$("#img0").attr("src", objUrl);
+					}
+				});
+			}
+		})
+	});
+	$("#btn-default").click(function(){
+		$albumn=$('[name="n_id"]').val();
+		$artistname=$('[name="artistname1"]').val();
+		$albumnname=$('[name="albumnname1"]').val();
+		$.ajax({ //一个Ajax过程
+			type: "post", //以post方式与后台沟通
+			url: "{:url('admin/Music/alertalbumn_edit')}", //与此php页面沟通
+			dataType: 'json',//从php返回的值以 JSON方式 解释
+			data:{"albumnid":$albumn,"artistname":$artistname,"albumnname":$albumnname},//发给php的数据
+			success: function (data) {
+				window.location = "{:url('admin/Music/albumn_list')}"
+			}
+		});
+
+	})
+	var $j=1
+	$('[name="artistname"]').click(function(){
+		$j=$j+1
+		$artistname=$(this).prev().val();
+		var $bb = $(this).next();
+		if($j%2==0) {
+			$.ajax({ //一个Ajax过程
+				type: "post", //以post方式与后台沟通
+				url: "{:url('admin/Music/artistalbumn_list')}", //与此php页面沟通
+				dataType: 'json',//从php返回的值以 JSON方式 解释
+				data: "artistname=" + $artistname,//发给php的数据
+				success: function (data) {
+					var $str = "";
+					for (i = 0; i < data.length; i++) {
+						$str += '<p style="background-color: #00A8FF; line-height: 20px; text-align: center; align: center; color: #fff;">' + data[i]["albumnname"] + '</p>'
+					}
+					$bb.html($str);
+				}
+			});
+		}else{
+			$bb.html("");
+		}
+	});
+	var $i=1
+	$('[name="albumnname"]').click(function(){
+		$i=$i+1
+		$order_id=$(this).prev().val();
+		var $aa=$(this).next().next();
+		if($i%2==0){
+			$.ajax({ //一个Ajax过程
+				type: "post", //以post方式与后台沟通
+				url: "{:url('admin/Music/music_list')}", //与此php页面沟通
+				dataType: 'json',//从php返回的值以 JSON方式 解释
+				data: "albumnid="+$order_id,//发给php的数据
+				success: function (data) {
+					var $str="";
+					for(i=0;i<data.length;i++){
+						$str+='<p style="background-color: #00A8FF; line-height: 20px; text-align: center; align: center; color: #fff;">'+data[i]["filename"]+'.mp3 <a><input type="hidden" value="'+data[i]["id"]+'"><button type="button" name="testdel">删除</button></a></p>'
+					}
+					$aa.html($str);
+					$('[name="testdel"]').click(function(){
+						$id=$(this).prev().val();
+						layer.confirm('确定从专辑中删除这首歌吗？', {
+							btn: ['确定','取消'] //按钮
+						}, function(){
+							$.ajax({ //一个Ajax过程
+								type: "post", //以post方式与后台沟通
+								url: "{:url('admin/Music/music_list_del')}", //与此php页面沟通
+								dataType: 'json',//从php返回的值以 JSON方式 解释
+								data: "albumnid="+$id,//发给php的数据
+								success: function (data) {
+									layer.alert('删除成功', {
+										skin: 'layui-layer-lan',
+										closeBtn: 0,
+										anim: 4 //动画类型
+									});
+									window.location = "{:url('admin/Music/albumn_list')}";
+								}
+							});
+						});
+
+					});
+				}
+			});
+		}else{
+			$aa.html("");
+		}
+
+	});
+</script>
