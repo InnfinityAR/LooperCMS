@@ -33,10 +33,10 @@
 	<td class="hidden-xs" >{$v.creationdate}</td>
 	<td >
 		<div class="hidden-sm hidden-xs action-buttons">
-			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+			<a class="btn btn-primary btn-lg openmodal">
 				<input type="hidden" value="{$v['albumnid']}" name="albumnid">
-				<span class="aa"><i class="ace-icon fa fa-pencil bigger-130"></i></span>
-			</button>
+				<span><i class="ace-icon fa fa-pencil bigger-130"></i></span>
+			</a>
 			<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Music/albumn_runedit')}"  enctype="multipart/form-data">
 				<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
@@ -59,10 +59,7 @@
 										});
 									}
 								}
-								$("#file0").change(function(){
-									$aa=$(this).val()
-									imgform($aa);
-								});
+								
 							</script>
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-default"  data-dismiss="modal">关闭</button>
@@ -122,8 +119,16 @@
 			}
 		});
 	});
-	$('[ class="aa"]').click(function(){
-		$order_id=$(this).prev().val();
+	$('.openmodal').click(function(){
+	    $('#myModal1').modal({
+        keyboard: true
+		})
+		
+		
+		
+		$order_id=$(this).find("input").val();
+		
+		
 		$.ajax({ //一个Ajax过程
 			type: "post", //以post方式与后台沟通
 			url: "{:url('admin/Music/alertalbumn_list')}", //与此php页面沟通
@@ -154,6 +159,15 @@
 						+'</div>';
 
 				$("#modal-body").html($str);
+				
+				
+				$("#file0").change(function () {
+				var objUrl = getObjectURL(this.files[0]);
+			   // console.log("objUrl = " + objUrl);
+				if (objUrl) {
+					$("#img0").attr("src", objUrl);
+				}
+			});
 			}
 		})
 	});
