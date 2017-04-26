@@ -105,16 +105,26 @@
 					</div>
 					<div class="space-4"></div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 封面图片上传： </label>
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> loop封面上传： </label>
 						<div class="col-sm-10">
 							<input type="hidden" name="checkpic" id="checkpic" value="{$news_list.news_img}" />
 							<input type="hidden" name="oldcheckpic" id="oldcheckpic" value="{$news_list.news_img}" />
 							<a href="javascript:;" class="file" title="点击选择所要上传的图片">
-								<input type="file" name="pic_one[]" id="file0" multiple="multiple"/>
+								<input type="file" name="pic_one" id="file0" multiple="multiple"/>
 								选择上传文件
 							</a>
 							<span class="lbl">&nbsp;&nbsp;<img src="{$news_list.news_img|get_imgurl}" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;
-							<span class="lbl">&nbsp;&nbsp;上传前先用PS处理成等比例图片后上传，默认比例100*70、600*420、800*560像素<br /></span>
+						</div>
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 音乐封面： </label>
+						<div class="col-sm-10">
+							<input type="hidden" name="checkpic" id="checkpic1" value="{$news_list.loop_img|get_imgurl}" />
+							<input type="hidden" name="oldcheckpic" id="oldcheckpic1" value="{$news_list.loop_img}" />
+							<a href="javascript:;" class="file" title="点击选择所要上传的图片">
+								<input type="file" name="pic_two" id="file1" multiple="multiple"/>
+								选择上传文件
+							</a>
+							<span class="lbl">&nbsp;&nbsp;<img src="{$news_list.loop_img|get_imgurl}" width="100" height="70" id="img1" ></span>&nbsp;&nbsp;
+
 						</div>
 					</div>
 					<script type="text/javascript">
@@ -181,12 +191,6 @@
 						</div>
 					</div>
 					<div class="space-4"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 排序（从小到大）： </label>
-						<div class="col-sm-10">
-							<input type="text" name="listorder" value="{$news_list['listorder']|default=50}" class="col-xs-10 col-sm-1" />
-						</div>
-					</div>
 					<div class="space-4"></div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Loop主内容 </label>

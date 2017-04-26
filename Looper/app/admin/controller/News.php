@@ -65,8 +65,8 @@ class News extends Base
 					if (!file_exists($path)){
 						mkdir ($path);
 					}
-				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .$filename;
-				$move_file = move_uploaded_file($file, $path);
+				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .md5($filename.time()).$fileType;
+				$move_file = rename($file,$path);
 				if ($move_file) {
 					$path=str_replace(ROOT_PATH ."/","/",$path);
 					$music_url = $path;
@@ -150,8 +150,8 @@ class News extends Base
 				if (!file_exists($path)){
 					mkdir ($path);
 				}
-				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .$filename;
-				$move_file = move_uploaded_file($file, $path);
+				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .md5($filename.time()).$fileType;
+				$move_file = rename($file,$path);
 				if ($move_file) {
 					$path=str_replace(ROOT_PATH ."/","/",$path);
 					$music_url = $path;
@@ -271,22 +271,35 @@ class News extends Base
             $map['news_time'] = array(array('egt',$arrdateone),array('elt',$arrdatetwo),'AND');
 		}
 		//map架构查询条件数组
-		$map['news_back']= 0;
+//		$map['news_back']= 0;
 		if(!empty($key)){
 			$map['news_title']= array('like',"%".$key."%");
 		}
 		$where=$diyflag?"FIND_IN_SET('$diyflag',news_flag)":'';
 		$news_model=new NewsModel;
 		$con=input('con');
-		if($con) {
-			$news = $news_model->alias("a")->field('a.*,b.*')
-				->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
-				->where($map)->where($where)->order("$con desc")->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
-		}else{
-			$news = $news_model->alias("a")->field('a.*,b.*')
-				->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
-				->where($map)->where($where)->order('news_time desc')->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
+		if(!empty($key)){
+			if($con) {
+				$news = $news_model->alias("a")->field('a.*,b.*')
+					->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
+					->where($map)->where($where)->order("$con desc")->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
+			}else{
+				$news = $news_model->alias("a")->field('a.*,b.*')
+					->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
+					->where($map)->where($where)->order('news_time desc')->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
 
+			}
+		}else{
+			if($con) {
+				$news = $news_model->alias("a")->field('a.*,b.*')
+					->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
+					->where($where)->order("$con desc")->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
+			}else{
+				$news = $news_model->alias("a")->field('a.*,b.*')
+					->join(config('database.prefix') . 'member_list b', 'a.news_auto =b.member_list_id')
+					->where($where)->order('news_time desc')->paginate(config('paginate.list_rows'), false, ['query' => get_query()]);
+
+			}
 		}
 			$show = $news->render();
 		$show=preg_replace("(<a[^>]*page[=|/](\d+).+?>(.+?)<\/a>)","<a href='javascript:ajax_page($1);'>$2</a>",$show);
@@ -347,77 +360,8 @@ class News extends Base
 			$this->error('提交方式不正确',url('admin/News/news_list'));
 		}
 		//获取图片上传后路径
+
 		$pic_oldlist=input('pic_oldlist');//老多图字符串
-		$img_one='';
-		$picall_url='';
-		$file = request()->file('pic_one');
-		$files = request()->file('pic_all');
-		//上传处理
-		if($file || $files) {
-			if(config('storage.storage_open')){
-				//七牛
-				$upload = \Qiniu::instance();
-				$info = $upload->upload();
-				$error = $upload->getError();
-				if ($info) {
-					if($file && $files){
-						//有单图、多图
-						if(!empty($info['pic_one'])) $img_one= config('storage.domain').$info['pic_one'][0]['key'];
-						if(!empty($info['pic_all'])) {
-							foreach ($info['pic_all'] as $file) {
-								$img_url=config('storage.domain').$file['key'];
-								$picall_url = $img_url . ',' . $picall_url;
-							}
-						}
-					}elseif($file){
-						//单图
-						$img_one= config('storage.domain').$info[0]['key'];
-					}else{
-						//多图
-						foreach ($info as $file) {
-							$img_url=config('storage.domain').$file['key'];
-							$picall_url = $img_url . ',' . $picall_url;
-						}
-					}
-				}else{
-					$this->error($error,url('admin/News/news_list'));//否则就是上传错误，显示错误原因
-				}
-			}else{
-				$validate = config('upload_validate');
-				//单图
-				if (!empty($file)) {
-					$info = $file[0]->validate($validate)->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
-					if ($info) {
-						$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
-						//写入数据库
-						$data['uptime'] = date("Y-m-d H:i:s",time());
-						$data['filesize'] = $info->getSize();
-						$data['path'] = $img_url;
-						Db::name('plug_files')->insert($data);
-						$img_one = $img_url;
-					} else {
-						$this->error($file->getError(), url('admin/News/news_list'));//否则就是上传错误，显示错误原因
-					}
-				}
-				//多图
-				if (!empty($files)) {
-					foreach ($files as $file) {
-						$info = $file->validate($validate)->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
-						if ($info) {
-							$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
-							//写入数据库
-							$data['uptime'] = date("Y-m-d H:i:s",time());
-							$data['filesize'] = $info->getSize();
-							$data['path'] = $img_url;
-							Db::name('plug_files')->insert($data);
-							$picall_url = $img_url . ',' . $picall_url;
-						} else {
-							$this->error($file->getError(), url('admin/News/news_list'));//否则就是上传错误，显示错误原因
-						}
-					}
-				}
-			}
-		}
 //		获取Loop属性
 		$news_flag=input('post.news_flag/a');
 		$flag=array();
@@ -433,9 +377,6 @@ class News extends Base
 			'news_titleshort'=>input('news_titleshort',''),
 			'news_columnid'=>input('news_columnid'),
 			'news_flag'=>$flagdata,
-			'news_zaddress'=>input('news_zaddress',''),
-			'news_key'=>input('news_key',''),
-			'news_tag'=>input('news_tag',''),
 			'news_source'=>input('news_source',''),
 			'news_time'=>date("Y-m-d H:i:s",time()),
 			'news_pic_content'=>input('news_pic_content',''),
@@ -444,12 +385,21 @@ class News extends Base
 			'news_content'=>htmlspecialchars_decode(input('news_content')),
 			'listorder'=>input('listorder',50,'intval'),
 		);
-		//图片字段处理
-		if(!empty($img_one)){
-			$sl_data['news_img']=$img_one;
+		$fileone = request()->file('pic_one');
+		$filetwo = request()->file('pic_two');
+		$info1 = $fileone->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
+
+		if ($info1) {
+			$img_urlone = config('upload_path') . '/' . date('Y-m-d') . '/' . $info1->getFilename();
+			$sl_data['news_img'] = $img_urlone;
+
 		}
-		$sl_data['news_pic_allurl']=$pic_oldlist.$picall_url;
-		//根据栏目id,获取语言
+		$info2 = $filetwo->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
+		if ($info2) {
+			$img_urltwo = config('upload_path') . '/' . date('Y-m-d') . '/' . $info2->getFilename();
+			$sl_data['loop_img'] = $img_urltwo;
+		}
+		//图片字段处理
 		$news_l=Db::name('menu')->where('id',input('news_columnid'))->value('menu_l');
 		$sl_data['news_l']=$news_l;
 		//附加字段
@@ -457,29 +407,16 @@ class News extends Base
 		$news_extra['showdate']=($showtime=='')?time():strtotime($showtime);
 		$sl_data['news_extra']=json_encode($news_extra);
 		$loop_result=Db::name('news')->insertGetId($sl_data);
-		$userid=$_SESSION["think"]["admin_auth"]["aid"];//专辑管理员ID
 		if($loop_result){
-			$musicdata["loopid"]=$loop_result;
-			$filesid=Db::name('loop_music')->field("id")->where("userid=$userid and loopid=0")->select();
-			foreach($filesid as $v){
-				$id=$v["id"];
-				Db::name('loop_music')->where("id=$id")->update($musicdata);
-			}
-			Db::name('loop_music')->where("fileid=0")->delete();
-		}
-		//NewsModel::create($sl_data);
-		$continue=input('continue',0,'intval');
-		if($continue){
-            $this->success('Loop添加成功,继续发布',url('admin/News/news_add',['news_columnid'=>input('news_columnid')]));
+            $this->success('Loop添加成功,继续发布',url('admin/News/news_list'));
         }else{
-            $this->success('Loop添加成功,返回列表页',url('admin/News/news_list'));
+            $this->success('Loop添加失败,返回列表页',url('admin/News/news_list'));
         }
 	}
     /**
      * 编辑显示
      */
-	public function news_edit()
-	{
+	public function news_edit(){
 		$n_id = input('n_id');
 		$_SESSION["edit_id"]=$n_id;
 		$music_list1=Db::name('loop_music')->alias("a")->field('b.path,b.filename')
@@ -533,80 +470,8 @@ class News extends Base
 		if (!request()->isAjax()){
 			$this->error('提交方式不正确',url('admin/News/news_list'));
 		}
-		//获取图片上传后路径
+//		获取文章属性
 		$userid=$_SESSION["think"]["admin_auth"]["aid"];//专辑管理员ID
-		$pic_oldlist=input('pic_oldlist');//老多图字符串
-		$img_one='';
-		$picall_url='';
-		$file = request()->file('pic_one');
-		$files = request()->file('pic_all');
-		//上传处理
-		if($file || $files) {
-			if(config('storage.storage_open')){
-				//七牛
-				$upload = \Qiniu::instance();
-				$info = $upload->upload();
-				$error = $upload->getError();
-				if ($info) {
-					if($file && $files){
-						//有单图、多图
-						if(!empty($info['pic_one'])) $img_one= config('storage.domain').$info['pic_one'][0]['key'];
-						if(!empty($info['pic_all'])) {
-							foreach ($info['pic_all'] as $file) {
-								$img_url=config('storage.domain').$file['key'];
-								$picall_url = $img_url . ',' . $picall_url;
-							}
-						}
-					}elseif($file){
-						//单图
-						$img_one= config('storage.domain').$info[0]['key'];
-					}else{
-						//多图
-						foreach ($info as $file) {
-							$img_url=config('storage.domain').$file['key'];
-							$picall_url = $img_url . ',' . $picall_url;
-						}
-					}
-				}else{
-					$this->error($error,url('admin/News/news_list'));//否则就是上传错误，显示错误原因
-				}
-			}else{
-				$validate = config('upload_validate');
-				//单图
-				if (!empty($file)) {
-					$info = $file[0]->validate($validate)->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
-					if ($info) {
-						$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
-						//写入数据库
-						$data['uptime'] = date("Y-m-d H:i:s",time());
-						$data['filesize'] = $info->getSize();
-						$data['path'] = $img_url;
-						Db::name('plug_files')->insert($data);
-						$img_one = $img_url;
-					} else {
-						$this->error($file->getError(), url('admin/News/news_list'));//否则就是上传错误，显示错误原因
-					}
-				}
-				//多图
-				if (!empty($files)) {
-					foreach ($files as $file) {
-						$info = $file->validate($validate)->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
-						if ($info) {
-							$img_url = config('upload_path'). '/' . date('Y-m-d') . '/' . $info->getFilename();
-							//写入数据库
-							$data['uptime'] = date("Y-m-d H:i:s",time());
-							$data['filesize'] = $info->getSize();
-							$data['path'] = $img_url;
-							Db::name('plug_files')->insert($data);
-							$picall_url = $img_url . ',' . $picall_url;
-						} else {
-							$this->error($file->getError(), url('admin/News/news_list'));//否则就是上传错误，显示错误原因
-						}
-					}
-				}
-			}
-		}
-//		获取Loop属性
 		$news_flag=input('post.news_flag/a');
 		$flag=array();
 		if(!empty($news_flag)){
@@ -617,42 +482,42 @@ class News extends Base
 		$flagdata=implode(',',$flag);
 		$n_id=input("n_id");
 		$sl_data=array(
-			'n_id'=>input('n_id'),
 			'news_title'=>input('news_title'),
-			'news_titleshort'=>input('news_titleshort',''),
 			'news_flag'=>$flagdata,
-			'news_zaddress'=>input('news_zaddress',''),
-			'news_key'=>input('news_key',''),
-			'news_tag'=>input('news_tag',''),
 			'news_source'=>input('news_source',''),
-			'news_pic_content'=>input('news_pic_content',''),
-			'news_open'=>input('news_open',0),
-			'news_scontent'=>input('news_scontent',''),
 			'news_content'=>htmlspecialchars_decode(input('news_content')),
-			'listorder'=>input('listorder',50,'intval'),
 		);
 		//图片字段处理
-		if(!empty($img_one)){
-			$sl_data['news_img']=$img_one;
+		$fileone = request()->file('pic_one');
+		if ($fileone) {
+			$info3 = $fileone->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
+			if ($info3) {
+				$img_urlone = config('upload_path') . '/' . date('Y-m-d') . '/' . $info3->getFilename();
+			}
+			$sl_data['news_img'] = $img_urlone;
 		}
-		$sl_data['news_pic_allurl']=$pic_oldlist.$picall_url;
-		$showtime=input('showdate','');
-		$news_extra['showdate']=($showtime=='')?time():strtotime($showtime);
-		$sl_data['news_extra']=json_encode($news_extra);
-		$rst=NewsModel::update($sl_data);
-		if($rst){
+		$filetwo = request()->file('pic_two');
+		if ($filetwo) {
+			$info2 = $filetwo->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
+			if ($info2) {
+				$img_urltwo = config('upload_path') . '/' . date('Y-m-d') . '/' . $info2->getFilename();
+			}
+			$sl_data["loop_img"] = $img_urltwo;
+		}
+		$rst=Db::name("news")->where("n_id=$n_id")->update($sl_data);
+		$filesid=Db::name('loop_music')->field("id")->where("userid=$userid and loopid=0")->select();
+		if($filesid){
 			$musicdata["loopid"]=$n_id;
-			$filesid=Db::name('loop_music')->field("id")->where("userid=$userid and loopid=0")->select();
 			foreach($filesid as $v){
 				$id=$v["id"];
 				Db::name('loop_music')->where("id=$id")->update($musicdata);
 			}
 			Db::name('loop_music')->where("fileid=0")->delete();
 		}
-		if($rst!==false){
-			$this->success('Loop修改成功,返回列表页',url('admin/News/news_list'));
+		if($rst){
+			$this->success('loop修改成功,返回列表页',url('admin/News/news_list'));
 		}else{
-			$this->error('Loop修改失败',url('admin/News/news_list'));
+			$this->error('loop修改失败',url('admin/News/news_list'));
 		}
 	}
     /**
@@ -677,10 +542,9 @@ class News extends Base
      */
 	public function news_del()
 	{
-		$p=input('p');
-		$news_model=new NewsModel;
-		$rst=$news_model->where(array('n_id'=>input('n_id')))->setField('news_back',1);//转入回收站
-		if($rst!==false){
+		$p=input('n_id');
+		$rst=Db::name("news")->where("n_id=$p")->delete();
+		if($rst){
 			$this->success('Loop删除成功',url('admin/News/news_list',array('p' => $p)));
 		}else{
 			$this -> error("删除Loop失败！",url('admin/News/news_list',array('p'=>$p)));

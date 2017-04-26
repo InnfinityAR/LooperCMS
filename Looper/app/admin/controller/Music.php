@@ -121,8 +121,8 @@ class Music extends Base
 				if (!file_exists($path)){
 					mkdir ($path);
 				}
-				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .$filename;
-				$move_file = move_uploaded_file($file, $path);
+				$path = ROOT_PATH . config('upload_path') . DS . date('Y-m-d') . '/' .md5($filename.time()).$fileType;
+				$move_file = rename($file,$path);
 				if ($move_file) {
 					$path=str_replace(ROOT_PATH ."/","/",$path);
 					$music_url = $path;//写入数据库
@@ -276,7 +276,7 @@ class Music extends Base
 		$file = request()->file('pic_one');
 		$fileType=substr(strrchr($_FILES['pic_one']['type'], '/'),1);
 		$fileOldName=$_FILES['pic_one']['name'];
-		$info = $file->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'),"");
+		$info = $file->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
 		if ($info) {
 			$img_url = config('upload_path') . '/' . date('Y-m-d') . '/' . $info->getFilename();
 		}

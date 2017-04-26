@@ -44,30 +44,6 @@
 					<i class="ace-icon fa fa-trash-o bigger-130"></i>
 				</a>
 			</div>
-			<div class="hidden-md hidden-lg">
-				<div class="inline position-relative">
-					<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-						<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-					</button>
-					<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-						<li>
-							<a href="{:url('admin/News/news_edit',array('n_id'=>$v['n_id']))}" class="tooltip-success" data-rel="tooltip" title="" data-original-title="修改">
-								<span class="green">
-									<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-								</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="{:url('admin/News/news_del',array('n_id'=>$v['n_id'],'p'=>input('p',1)))}" data-info="你确定要删除到回收站吗？" class="tooltip-error confirm-rst-url-btn" data-rel="tooltip" title="回收站" data-original-title="回收站">
-								<span class="red">
-									<i class="ace-icon fa fa-trash-o bigger-120"></i>
-								</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
 		</td>
 	</tr>
 {/foreach}

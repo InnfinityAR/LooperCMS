@@ -71,11 +71,11 @@ class Flag extends Base
 			$this->error('提交方式不正确', url('admin/Flag/flag_list'));
 		}
 		$fileone = request()->file('pic_one');
+		$filetwo = request()->file('pic_two');
 		$info = $fileone->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
 		if ($info) {
 			$img_urlone = config('upload_path') . '/' . date('Y-m-d') . '/' . $info->getFilename();
 		}
-		$filetwo = request()->file('pic_two');
 		$info = $filetwo->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
 		if ($info) {
 			$img_urltwo = config('upload_path') . '/' . date('Y-m-d') . '/' . $info->getFilename();
