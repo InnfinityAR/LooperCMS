@@ -76,4 +76,13 @@ class Base extends Common
 //		echo "<img src=".$music_pic.">";
 		return $music_pic;
 	}
+	public function base64_img($path){
+
+        $file=ROOT_PATH.$path;
+        $fp=fopen($file,"r")or die("Can't open file");
+
+        $file_content=chunk_split(base64_encode(fread($fp,filesize($file))));//base64编码
+        fclose($fp);
+        return  $file_content;
+    }
 }

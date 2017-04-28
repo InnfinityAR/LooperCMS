@@ -360,54 +360,50 @@ class News extends Base
 			$this->error('提交方式不正确',url('admin/News/news_list'));
 		}
 		//获取图片上传后路径
-
+        $manageid=$_SESSION["think"]["admin_auth"]["aid"];
 		$pic_oldlist=input('pic_oldlist');//老多图字符串
 //		获取Loop属性
 		$news_flag=input('post.news_flag/a');
 		$flag=array();
 		if(!empty($news_flag)){
-			foreach ($news_flag as $v){
+			foreach($news_flag as $v){
 				$flag[]=$v;
 			}
 		}
-		$flagdata=implode(',',$flag);
-		$sl_data=array(
-			'n_id'=>input('n_id'),
-			'news_title'=>input('news_title'),
-			'news_titleshort'=>input('news_titleshort',''),
-			'news_columnid'=>input('news_columnid'),
-			'news_flag'=>$flagdata,
-			'news_source'=>input('news_source',''),
-			'news_time'=>date("Y-m-d H:i:s",time()),
-			'news_pic_content'=>input('news_pic_content',''),
-			'news_open'=>input('news_open',0),
-			'news_scontent'=>input('news_scontent',''),
-			'news_content'=>htmlspecialchars_decode(input('news_content')),
-			'listorder'=>input('listorder',50,'intval'),
-		);
+
+//		$flagdata=implode(',',$flag);
+        $sl_data=array(
+            'name'=>input('news_title'),
+            'description'=>htmlspecialchars_decode(input('news_content')),
+           'tags'=>$flag,
+            'manageId'=>$manageid,
+        );
 		$fileone = request()->file('pic_one');
 		$filetwo = request()->file('pic_two');
 		$info1 = $fileone->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
-
 		if ($info1) {
 			$img_urlone = config('upload_path') . '/' . date('Y-m-d') . '/' . $info1->getFilename();
-			$sl_data['news_img'] = $img_urlone;
+    		$sl_data['photo1'] =$this->base64_img($img_urlone);
 
 		}
 		$info2 = $filetwo->rule('uniqid')->move(ROOT_PATH . config('upload_path') . DS . date('Y-m-d'));
 		if ($info2) {
 			$img_urltwo = config('upload_path') . '/' . date('Y-m-d') . '/' . $info2->getFilename();
-			$sl_data['loop_img'] = $img_urltwo;
+			$sl_data['photo2'] =$this->base64_img($img_urltwo);
 		}
+
 		//图片字段处理
-		$news_l=Db::name('menu')->where('id',input('news_columnid'))->value('menu_l');
-		$sl_data['news_l']=$news_l;
 		//附加字段
-		$showtime=input('showdate','');
-		$news_extra['showdate']=($showtime=='')?time():strtotime($showtime);
-		$sl_data['news_extra']=json_encode($news_extra);
-		$loop_result=Db::name('news')->insertGetId($sl_data);
-		if($loop_result){
+//		$loop_result=Db::name('news')->insertGetId($sl_data);
+        $url = "http://api2.innfinityar.com/web/createLoop";
+        $ch =curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);//要访问的地址
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//执行结果是否被返回，0是返回，1是不返回
+        curl_setopt($ch, CURLOPT_POST, 1);// 发送一个常规的POST请求
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($sl_data));
+        $output = curl_exec($ch);//执行并获取数据
+        curl_close($ch);
+		if($output){
             $this->success('Loop添加成功,继续发布',url('admin/News/news_list'));
         }else{
             $this->success('Loop添加失败,返回列表页',url('admin/News/news_list'));
@@ -502,7 +498,7 @@ class News extends Base
 			if ($info2) {
 				$img_urltwo = config('upload_path') . '/' . date('Y-m-d') . '/' . $info2->getFilename();
 			}
-			$sl_data["loop_img"] = $img_urltwo;
+			$sl_data["news_img2"] = $img_urltwo;
 		}
 		$rst=Db::name("news")->where("n_id=$n_id")->update($sl_data);
 		$filesid=Db::name('loop_music')->field("id")->where("userid=$userid and loopid=0")->select();
