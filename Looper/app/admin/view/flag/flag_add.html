@@ -1,0 +1,58 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+	<div class="page-content">
+		<!--主题-->
+		<div class="page-header">
+			<h1>
+				您当前操作
+				<small>
+					<i class="ace-icon fa fa-angle-double-right"></i>
+					添加风格
+				</small>
+			</h1>
+		</div>
+		<div class="row">
+			<form class="form-horizontal ajaxForm2" name="form0" method="post" action="{:url('admin/Flag/flag_runadd')}"  enctype="multipart/form-data">
+				<!--//所属栏目改为所属专辑-->
+				<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格名称：  </label>
+						<div class="col-sm-10">
+							<input type="text" name="news_title" id="news_title"  placeholder="必填：风格名称"  class="col-xs-10 col-sm-6" required/>
+						</div>
+					</div>
+					<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1">风格主题：  </label>
+					<div class="col-sm-10">
+						{foreach name='theme' item='diyflag'}
+							<input type="radio" name="theme" value="{$diyflag.diyflag_id}">{$diyflag.diyflag_name}
+						{/foreach}
+					</div>
+				</div>
+				<div class="space-4"></div>
+					<div class="space-4"></div>
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<input class="ace ace-checkbox-2" name="continue" type="checkbox" value="1">
+							<span class="lbl"> 发布后继续</span>
+							<button class="btn btn-info" type="submit">
+								<i class="ace-icon fa fa-check bigger-110"></i>
+								保存
+							</button>
+
+							&nbsp; &nbsp; &nbsp;
+							<button class="btn" type="reset">
+								<i class="ace-icon fa fa-undo bigger-110"></i>
+								重置
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div><!-- /.page-content -->
+{/block}
+{block name="scripts"}
+{/block}
