@@ -29,8 +29,8 @@
 						<div class="checkbox" >
 							<div style="height:44px; overflow-y: scroll;" id="auto_flag">
 								{foreach name='diyflag' item='diyflag'}
-									<label id="news_flag_{$diyflag.diyflag_name}">
-										<input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox"  value="{$diyflag.diyflag_name}" />
+									<label id="news_tag_{$diyflag.diyflag_name}">
+										<input class="ace ace-checkbox-2" name="news_tag[]" type="checkbox"  value="{$diyflag.diyflag_name}" />
 										<span class="lbl">{$diyflag.diyflag_name}</span>
 									</label>
 								{/foreach}
@@ -51,14 +51,14 @@
 											}else {
 												$.ajax({ //一个Ajax过程
 													type: "post", //以post方式与后台沟通
-													url : "{:url('admin/News/news_flag')}", //与此php页面沟通
+													url : "{:url('admin/News/news_tag')}", //与此php页面沟通
 													dataType:'json',//从php返回的值以 JSON方式 解释
 													data: 'creat_flag='+$input ,//发给php的数据
 													success: function(date){
 														var $str="";
 														$("#auto_flag").html("");
 														for(i=0;i<date.length;i++){
-															$str+='<label id="news_flag_'+date[i]["diyflag_name"]+'"><input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="'+date[i]["diyflag_name"]+'" /><span class="lbl">'+date[i]["diyflag_name"]+'</span></label>';
+															$str+='<label id="news_tag_'+date[i]["diyflag_name"]+'"><input class="ace ace-checkbox-2" name="news_tag[]" type="checkbox" id="news_tag_va{$diyflag.diyflag_name}" value="'+date[i]["diyflag_name"]+'" /><span class="lbl">'+date[i]["diyflag_name"]+'</span></label>';
 														}
 														$("#auto_flag").html($str);
 														layer.msg('创建成功请在上栏选择', {
@@ -285,11 +285,11 @@
 		});
 		//跳转额外属性
 		$("#pptaddress").hide();
-		$("#news_flag_vaj").click(function(){
+		$("#news_tag_vaj").click(function(){
 			$("#pptaddress").toggle(400);
 		});
 		$("#cpprice").hide();
-		$("#news_flag_vacp").click(function(){
+		$("#news_tag_vacp").click(function(){
 			$("#cpprice").toggle(400);
 		});
 		$('.date-picker').datepicker({

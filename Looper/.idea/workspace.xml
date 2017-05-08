@@ -25,8 +25,8 @@
       <file leaf-file-name="news_edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.305555">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.3473682">
+              <caret line="383" column="17" selection-start-line="383" selection-start-column="17" selection-end-line="383" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -37,18 +37,38 @@
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#audio#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <marker date="1493967830374" expanded="true" signature="11949:11975" placeholder="..." />
-                <marker date="1493967830374" expanded="true" signature="12161:12187" placeholder="..." />
+                <marker date="1494213373505" expanded="true" signature="11939:11965" placeholder="..." />
+                <marker date="1494213373505" expanded="true" signature="12151:12177" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="News.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ajax_news_back.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_back.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_news_list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.64117646">
+              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/controller/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04745167">
-              <caret line="498" column="11" selection-start-line="498" selection-start-column="11" selection-end-line="498" selection-end-column="11" />
+            <state vertical-scroll-proportion="-1.7894737">
+              <caret line="696" column="57" selection-start-line="696" selection-start-column="57" selection-end-line="696" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -67,8 +87,8 @@
       <file leaf-file-name="news_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+            <state vertical-scroll-proportion="-1.1368421">
+              <caret line="4" column="126" selection-start-line="4" selection-start-column="124" selection-end-line="4" selection-end-column="126" />
               <folding />
             </state>
           </provider>
@@ -77,11 +97,15 @@
       <file leaf-file-name="news_add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state vertical-scroll-proportion="-75.68421">
+              <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
               <folding>
-                <marker date="1493873933874" expanded="true" signature="9002:9028" placeholder="..." />
-                <marker date="1493873933874" expanded="true" signature="9216:9242" placeholder="..." />
+                <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,11 +130,12 @@
         <option value="$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list.html" />
         <option value="$PROJECT_DIR$/app/admin/controller/Music.php" />
         <option value="$PROJECT_DIR$/app/admin/view/music/albumn_list.html" />
+        <option value="$PROJECT_DIR$/public/yfcmf/yfcmf.js" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/admin/controller/News.php" />
         <option value="$PROJECT_DIR$/app/admin/view/news/news_add.html" />
         <option value="$PROJECT_DIR$/app/admin/view/news/news_edit.html" />
-        <option value="$PROJECT_DIR$/public/yfcmf/yfcmf.js" />
-        <option value="$PROJECT_DIR$/app/admin/controller/News.php" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/admin/view/news/ajax_news_list.html" />
       </list>
     </option>
   </component>
@@ -162,44 +187,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -207,7 +194,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -256,10 +243,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -315,22 +302,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="553" column="9" selection-start-line="553" selection-start-column="9" selection-end-line="553" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/yfcmf/yfcmf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="347" column="10" selection-start-line="345" selection-start-column="7" selection-end-line="347" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -344,8 +315,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
-            <marker date="1493873933874" expanded="true" signature="9002:9028" placeholder="..." />
-            <marker date="1493873933874" expanded="true" signature="9216:9242" placeholder="..." />
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -372,8 +347,8 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#audio#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <marker date="1493967830374" expanded="true" signature="11949:11975" placeholder="..." />
-            <marker date="1493967830374" expanded="true" signature="12161:12187" placeholder="..." />
+            <marker date="1494213373505" expanded="true" signature="11939:11965" placeholder="..." />
+            <marker date="1494213373505" expanded="true" signature="12151:12177" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -423,8 +398,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
-            <marker date="1493873933874" expanded="true" signature="9002:9028" placeholder="..." />
-            <marker date="1493873933874" expanded="true" signature="9216:9242" placeholder="..." />
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -451,8 +430,8 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#audio#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <marker date="1493967830374" expanded="true" signature="11949:11975" placeholder="..." />
-            <marker date="1493967830374" expanded="true" signature="12161:12187" placeholder="..." />
+            <marker date="1494213373505" expanded="true" signature="11939:11965" placeholder="..." />
+            <marker date="1494213373505" expanded="true" signature="12151:12177" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -501,8 +480,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
           <folding>
-            <marker date="1493873933874" expanded="true" signature="9002:9028" placeholder="..." />
-            <marker date="1493873933874" expanded="true" signature="9216:9242" placeholder="..." />
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -543,8 +526,8 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#audio#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <marker date="1493967830374" expanded="true" signature="11949:11975" placeholder="..." />
-            <marker date="1493967830374" expanded="true" signature="12161:12187" placeholder="..." />
+            <marker date="1494213373505" expanded="true" signature="11939:11965" placeholder="..." />
+            <marker date="1494213373505" expanded="true" signature="12151:12177" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -577,8 +560,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="170" column="26" selection-start-line="170" selection-start-column="26" selection-end-line="170" selection-end-column="26" />
           <folding>
-            <marker date="1493873933874" expanded="true" signature="9002:9028" placeholder="..." />
-            <marker date="1493873933874" expanded="true" signature="9216:9242" placeholder="..." />
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -676,17 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <marker date="1493873933874" expanded="true" signature="9002:9028" placeholder="..." />
-            <marker date="1493873933874" expanded="true" signature="9216:9242" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/view/music/albumn_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0481586">
@@ -726,34 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.305555">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#11;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#13;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#18;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <marker date="1493967830374" expanded="true" signature="11949:11975" placeholder="..." />
-            <marker date="1493967830374" expanded="true" signature="12161:12187" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37961337">
@@ -764,8 +712,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/controller/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04745167">
-          <caret line="498" column="11" selection-start-line="498" selection-start-column="11" selection-end-line="498" selection-end-column="11" />
+        <state vertical-scroll-proportion="-1.7894737">
+          <caret line="696" column="57" selection-start-line="696" selection-start-column="57" selection-end-line="696" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1368421">
+          <caret line="4" column="126" selection-start-line="4" selection-start-column="124" selection-end-line="4" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-75.68421">
+          <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3473682">
+          <caret line="383" column="17" selection-start-line="383" selection-start-column="17" selection-end-line="383" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#11;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#13;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#18;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <marker date="1494213373505" expanded="true" signature="11939:11965" placeholder="..." />
+            <marker date="1494213373505" expanded="true" signature="12151:12177" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_back.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.64117646">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
           <folding />
         </state>
       </provider>

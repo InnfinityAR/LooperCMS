@@ -10,7 +10,7 @@
 		<td class="hidden-xs" style="vertical-align: middle;"><img src="{$v.news_img|get_imgurl}" style="width:80px; height: auto;"></td>
 		<td style="vertical-align: middle;"><a href="{:url('admin/News/news_edit',array('n_id'=>$v['n_id']))}" title="{$v.news_title}">{$v.news_title|subtext=25}</a>【{$v['member_list_nickname']|default=$v['member_list_username']}】</td>
 		<td class="hidden-sm hidden-xs" style="vertical-align: middle;">
-			<span style="color:#03C">{$v['news_flag']}</span>
+			<span style="color:#03C">{$v['news_tag']}</span>
 			</td>
 		<td class="hidden-xs" style="vertical-align: middle;">
 			{if condition="$v['news_open'] eq 1"}

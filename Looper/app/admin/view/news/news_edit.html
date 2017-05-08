@@ -31,8 +31,8 @@
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> loop属性：  </label>
 					<div class="checkbox" style="height:50px; overflow-y: scroll;" id="auto_flag">
 						{foreach name='diyflag' item='diyflag'}
-						<label id="news_flag_{$diyflag.diyflag_name}">
-							<input {foreach name='news_flag' item='news_flagv'} {if $news_flagv == $diyflag.diyflag_name}checked{/if}{/foreach} class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="{$diyflag.diyflag_name}" />
+						<label id="news_tag_{$diyflag.diyflag_name}">
+							<input {foreach name='news_tag' item='news_tagv'} {if $news_tagv == $diyflag.diyflag_name}checked{/if}{/foreach} class="ace ace-checkbox-2" name="news_tag[]" type="checkbox" id="news_tag_va{$diyflag.diyflag_name}" value="{$diyflag.diyflag_name}" />
 							<span class="lbl"> {$diyflag.diyflag_name}</span>
 						</label>
 						{/foreach}
@@ -54,14 +54,14 @@
 								}else {
 									$.ajax({ //一个Ajax过程
 										type: "post", //以post方式与后台沟通
-										url : "{:url('admin/News/news_flag')}", //与此php页面沟通
+										url : "{:url('admin/News/news_tag')}", //与此php页面沟通
 										dataType:'json',//从php返回的值以 JSON方式 解释
 										data: 'creat_flag='+$input ,//发给php的数据
 										success: function(date){
 											var $str="";
 											$("#auto_flag").html("");
 											for(i=0;i<date.length;i++){
-												$str+='<label id="news_flag_'+date[i]["diyflag_name"]+'"><input class="ace ace-checkbox-2" name="news_flag[]" type="checkbox" id="news_flag_va{$diyflag.diyflag_name}" value="'+date[i]["diyflag_name"]+'" /><span class="lbl">'+date[i]["diyflag_name"]+'</span></label>';
+												$str+='<label id="news_tag_'+date[i]["diyflag_name"]+'"><input class="ace ace-checkbox-2" name="news_tag[]" type="checkbox" id="news_tag_va{$diyflag.diyflag_name}" value="'+date[i]["diyflag_name"]+'" /><span class="lbl">'+date[i]["diyflag_name"]+'</span></label>';
 											}
 											$("#auto_flag").html($str);
 											layer.msg('创建成功请在上栏选择', {
@@ -372,16 +372,16 @@
 	$("#news_pic_qqlist").click(function(){
 		$("#pic_list").show();
 	});
-	if(!$("#news_flag_vaj").attr("checked")){
+	if(!$("#news_tag_vaj").attr("checked")){
 		$("#pptaddress").hide();
 	}
-	$("#news_flag_vaj").click(function(){
+	$("#news_tag_vaj").click(function(){
 		$("#pptaddress").toggle(400);
 	});
-	if(!$("#news_flag_vacp").attr("checked")){
+	if(!$("#news_tag_vacp").attr("checked")){
 		$("#cpprice").hide();
 	}
-	$("#news_flag_vacp").click(function(){
+	$("#news_tag_vacp").click(function(){
 		$("#cpprice").toggle(400);
 	});
 	$('.date-picker').datepicker({

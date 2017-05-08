@@ -32,10 +32,10 @@ class News extends Base
 		$userid=$_SESSION["think"]["admin_auth"]["aid"];//专辑管理员ID
 		$order_result=Db::name("loop_music")->where("id=$id")->update($data);
 		if($order_result){
-			$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.filename,b.artist")
+			$news_tag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.filename,b.artist")
 				->join(config('database.prefix').'plug_files b','a.fileid =b.id')
 				->where("loopid=0 and userid=$userid")->order("order_id desc")->select();
-			echo json_encode($news_flag,JSON_UNESCAPED_UNICODE);
+			echo json_encode($news_tag,JSON_UNESCAPED_UNICODE);
 		}
 	}
 	/*
@@ -45,10 +45,10 @@ class News extends Base
 		$id=input("id");
 		$userid=$_SESSION["think"]["admin_auth"]["aid"];//专辑管理员ID
 		Db::name("loop_music")->where("id=$id")->delete();
-		$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.filename,b.artist")
+		$news_tag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.filename,b.artist")
 			->join(config('database.prefix').'plug_files b','a.fileid =b.id')
 			->where("loopid=0 and userid=$userid")->order("order_id desc")->select();
-		echo json_encode($news_flag,JSON_UNESCAPED_UNICODE);
+		echo json_encode($news_tag,JSON_UNESCAPED_UNICODE);
 	}
 	/*
 	 * 对专辑选择的音乐进行插入操作
@@ -132,10 +132,10 @@ class News extends Base
 			}
 		}
 			Db::name('loop_music')->where("fileid=0")->delete();
-			$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.albumtitle,b.music_cover,b.filename,b.artist")
+			$news_tag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.albumtitle,b.music_cover,b.filename,b.artist")
 				->join(config('database.prefix').'plug_files b','a.fileid =b.id')
 				->where("loopid=0 and userid=$userid")->order("order_id desc")->select();
-			echo json_encode($news_flag,JSON_UNESCAPED_UNICODE);
+			echo json_encode($news_tag,JSON_UNESCAPED_UNICODE);
 	}
 	public function music_edit(){
 		$loopid=$_SESSION["edit_id"];
@@ -215,21 +215,21 @@ class News extends Base
 			}
 		}
 		Db::name('loop_music')->where("fileid=0")->delete();
-		$news_flag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.albumtitle,b.music_cover,b.filename,b.artist")
+		$news_tag=Db::name('loop_music')->alias("a")->field("a.id,a.order_id,a.fileid,b.albumtitle,b.music_cover,b.filename,b.artist")
 			->join(config('database.prefix').'plug_files b','a.fileid =b.id')
 			->where("loopid=0 and userid=$userid")->order("order_id desc")->select();
-		echo json_encode($news_flag,JSON_UNESCAPED_UNICODE);
+		echo json_encode($news_tag,JSON_UNESCAPED_UNICODE);
 	}
 	/*
 	 * 管理员新建风格
 	 * ajax
 	 */
-	public function news_flag(){
+	public function news_tag(){
 		$manage_id=$_SESSION["think"]["admin_auth"]["aid"];
 		$diyflag_name=input('creat_flag');
-		$news_flag=Db::name('diyflag')->where("diyflag_name='$diyflag_name' AND manage_id =$manage_id")->select();
+		$news_tag=Db::name('diyflag')->where("diyflag_name='$diyflag_name' AND manage_id =$manage_id")->select();
 		//查询diyflag中此风格是否存在
-		if($news_flag){
+		if($news_tag){
 			echo json_encode("此风格已存在",JSON_UNESCAPED_UNICODE);
 		}else{
 			if($manage_id==1){
@@ -290,7 +290,7 @@ class News extends Base
 		if(!empty($key)){
 			$map['news_title']= array('like',"%".$key."%");
 		}
-		$where=$diyflag?"FIND_IN_SET('$diyflag',news_flag)":'';
+		$where=$diyflag?"FIND_IN_SET('$diyflag',news_tag)":'';
 		$news_model=new NewsModel;
 		$con=input('con');
 		if(!empty($key)){
@@ -376,10 +376,10 @@ class News extends Base
         $manageid = $_SESSION["think"]["admin_auth"]["aid"];
 		$files = request()->file('pic_list');
         $pic_oldlist = input('pic_oldlist');//老多图字符串
-        $news_flag = input('post.news_flag/a');
+        $news_tag = input('post.news_tag/a');
         $flag = array();
-        if (!empty($news_flag)) {
-            foreach ($news_flag as $v) {
+        if (!empty($news_tag)) {
+            foreach ($news_tag as $v) {
                 $flag[] = $v;
             }
         }
@@ -485,13 +485,13 @@ class News extends Base
 		$this->assign('menu',$menu_text);
 		$diyflag=Db::name('diyflag')->where("pid!=0")->select();//风格
 		$source=Db::name('source')->select();//来源
-		$news_flag=Db::name('news')->field('news_flag')->where("n_id=$n_id")->select();
-		$news_listarr = explode(",", $news_flag[0]['news_flag']);//用于遍历出所有的已选中的风格
+		$news_tag=Db::name('news')->field('news_tag')->where("n_id=$n_id")->select();
+		$news_listarr = explode(",", $news_tag[0]['news_tag']);//用于遍历出所有的已选中的风格
 		$this->assign('source',$source);
 		$this->assign('manageid',$manageid);
 		$this->assign('news_extra',$news_extra);
 		$this->assign('diyflag',$diyflag);
-		$this->assign('news_flag',$news_listarr);
+		$this->assign('news_tag',$news_listarr);
 		$this->assign('news_list',$news_list);
 		return $this->fetch();
 	}
@@ -505,10 +505,10 @@ class News extends Base
 		}
 //		获取文章属性
 		$userid=$_SESSION["think"]["admin_auth"]["aid"];//专辑管理员ID
-		$news_flag=input('post.news_flag/a');
+		$news_tag=input('post.news_tag/a');
 		$flag=array();
-		if(!empty($news_flag)){
-			foreach ($news_flag as $v){
+		if(!empty($news_tag)){
+			foreach ($news_tag as $v){
 				$flag[]=$v;
 			}
 		}
@@ -516,7 +516,7 @@ class News extends Base
 		$n_id=input("n_id");
 		$sl_data=array(
 			'news_title'=>input('news_title'),
-			'news_flag'=>$flagdata,
+			'news_tag'=>$flagdata,
 			'news_source'=>input('news_source',''),
 			'news_content'=>htmlspecialchars_decode(input('news_content')),
 		);
@@ -694,7 +694,7 @@ class News extends Base
         if(!config('lang_switch_on')){
             $map['news_l']=  $this->lang;
         }
-		$where=$diyflag?"FIND_IN_SET('$diyflag',news_flag)":'';
+		$where=$diyflag?"FIND_IN_SET('$diyflag',news_tag)":'';
 		$news_model=new NewsModel;
 		$news=$news_model->alias("a")->field('a.*,b.*,c.menu_name')
 				->join(config('database.prefix').'member_list b','a.news_auto =b.member_list_id')
