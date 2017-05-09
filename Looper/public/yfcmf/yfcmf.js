@@ -320,9 +320,23 @@ function complete(data) {
     } else if(data.status == 0){
         $loopid=data.loopid;
        if($("#file-5")){
+           var $timestamp;
+           var $token;
            for(i=0;i<$('#file-5')[0].files.length;i++){
+               $.ajax({ //一个Ajax过程
+                    url : "/Looper/admin/Music/getToken", //与此php页面沟通
+                   type: 'POST',
+                   cache: false,
+                   dataType:'json',
+                   success: function(data){
+                       $timestamp=data["timestamp"];
+                       $token=data["token"];
+                   }
+               });
                var oMyForm = new FormData();
                oMyForm.append("music", $('#file-5')[0].files[i]);
+               oMyForm.append("timestamp",$timestamp );
+               oMyForm.append("token",$token );
                oMyForm.append("userId", 19);
                oMyForm.append("loopId", $loopid);
                $.ajax({ //一个Ajax过程

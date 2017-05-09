@@ -56,7 +56,6 @@ class Base extends Common
 		);
 		$AE->SetInfo($path, $music);
 		return $music;
-
 	}
 	/*
 	 *获取专辑封面
@@ -77,7 +76,6 @@ class Base extends Common
 		return $music_pic;
 	}
 	public function base64_img($path){
-
         $file=ROOT_PATH.$path;
         $fp=fopen($file,"r")or die("Can't open file");
 
@@ -85,4 +83,19 @@ class Base extends Common
         fclose($fp);
         return  $file_content;
     }
+	public function aesSecret($time){//获取加密字符
+		error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~ E_STRICT & ~ E_WARNING);
+		$aes = new \Aes();
+		$timestamp=$time."cs";
+		$str= $aes->aes128cbcEncrypt($timestamp);
+		return $str;
+	}
+	public function getToken(){
+		$time=time();
+		$return=array(
+			'timestamp'=>$time,
+			'token'=>$this->aesSecret($time),
+		);
+		echo json_encode($return,JSON_UNESCAPED_UNICODE);
+	}
 }

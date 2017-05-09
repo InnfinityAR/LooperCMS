@@ -9,14 +9,10 @@ if (!extension_loaded('mbstring')){
     trigger_error('PHP Extension module `mbstring` is required for AudioExif', E_USER_WARNING);
     return true;
 }
-// the Main Class
 class AudioExif{
-// public vars
     var $_wma = false;
     var $_mp3 = false;
-// Construct
     function AudioExif() {
-// nothing to do
     }
 // check the filesize
     function CheckSize($file) {
@@ -62,8 +58,6 @@ class AudioExif{
         return $ret;
     }
 }
-
-// DBCS => gb2312
 function dbcs_gbk($str)
 {
 // strip the last "\0\0"

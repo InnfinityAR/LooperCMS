@@ -25,8 +25,8 @@
       <file leaf-file-name="news_edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3473682">
-              <caret line="383" column="17" selection-start-line="383" selection-start-column="17" selection-end-line="383" selection-end-column="17" />
+            <state vertical-scroll-proportion="-33.805557">
+              <caret line="387" column="24" selection-start-line="387" selection-start-column="24" selection-end-line="387" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -54,12 +54,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax_news_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/public/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Base.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/controller/Base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.671875">
+              <caret line="86" column="24" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_news_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.64117646">
-              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+            <state vertical-scroll-proportion="-4.5555553">
+              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_albumn_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-40.515625">
+              <caret line="238" column="17" selection-start-line="238" selection-start-column="17" selection-end-line="238" selection-end-column="17" />
+              <folding>
+                <marker date="1494301643392" expanded="true" signature="4966:5101" placeholder="..." />
+                <marker date="1494301643392" expanded="true" signature="5135:5272" placeholder="..." />
+                <marker date="1494301643392" expanded="true" signature="5543:6080" placeholder="..." />
+                <marker date="1494301643392" expanded="true" signature="5838:5932" placeholder="..." />
+                <marker date="1494301643392" expanded="true" signature="7562:7655" placeholder="..." />
+                <marker date="1494301643392" expanded="true" signature="8218:8311" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,28 +104,8 @@
       <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/controller/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.7894737">
-              <caret line="696" column="57" selection-start-line="696" selection-start-column="57" selection-end-line="696" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yfcmf.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/yfcmf/yfcmf.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="347" column="10" selection-start-line="345" selection-start-column="7" selection-end-line="347" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1368421">
-              <caret line="4" column="126" selection-start-line="4" selection-start-column="124" selection-end-line="4" selection-end-column="126" />
+            <state vertical-scroll-proportion="-188.25">
+              <caret line="259" column="5" selection-start-line="259" selection-start-column="5" selection-end-line="259" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -97,8 +114,8 @@
       <file leaf-file-name="news_add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-75.68421">
-              <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+            <state vertical-scroll-proportion="-3.8055556">
+              <caret line="290" column="29" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -106,7 +123,19 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1494213373464" expanded="true" signature="8996:9022" placeholder="..." />
+                <marker date="1494213373464" expanded="true" signature="9210:9236" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="albumn_add.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/music/albumn_add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.318102">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,8 +143,8 @@
       <file leaf-file-name="Music.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/controller/Music.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="446" column="9" selection-start-line="446" selection-start-column="9" selection-end-line="446" selection-end-column="9" />
+            <state vertical-scroll-proportion="-123.0">
+              <caret line="179" column="11" selection-start-line="179" selection-start-column="11" selection-end-line="179" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -127,15 +156,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/database.php" />
-        <option value="$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list.html" />
-        <option value="$PROJECT_DIR$/app/admin/controller/Music.php" />
         <option value="$PROJECT_DIR$/app/admin/view/music/albumn_list.html" />
         <option value="$PROJECT_DIR$/public/yfcmf/yfcmf.js" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/app/admin/controller/News.php" />
         <option value="$PROJECT_DIR$/app/admin/view/news/news_add.html" />
         <option value="$PROJECT_DIR$/app/admin/view/news/news_edit.html" />
         <option value="$PROJECT_DIR$/app/admin/view/news/ajax_news_list.html" />
+        <option value="$PROJECT_DIR$/app/admin/controller/Base.php" />
+        <option value="$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list.html" />
+        <option value="$PROJECT_DIR$/app/admin/controller/News.php" />
+        <option value="$PROJECT_DIR$/app/admin/controller/Music.php" />
+        <option value="$PROJECT_DIR$/app/admin/view/music/albumn_add.html" />
       </list>
     </option>
   </component>
@@ -179,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,10 +219,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,14 +343,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -321,6 +354,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1494213373464" expanded="true" signature="8996:9022" placeholder="..." />
+            <marker date="1494213373464" expanded="true" signature="9210:9236" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -404,6 +439,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1494213373464" expanded="true" signature="8996:9022" placeholder="..." />
+            <marker date="1494213373464" expanded="true" signature="9210:9236" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -486,6 +523,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1494213373464" expanded="true" signature="8996:9022" placeholder="..." />
+            <marker date="1494213373464" expanded="true" signature="9210:9236" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -566,6 +605,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1494213373464" expanded="true" signature="8996:9022" placeholder="..." />
+            <marker date="1494213373464" expanded="true" signature="9210:9236" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -600,52 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="54.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3875">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57857144">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/music/albumn_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.75">
-          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -694,57 +693,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Music.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="446" column="9" selection-start-line="446" selection-start-column="9" selection-end-line="446" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37961337">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7894737">
-          <caret line="696" column="57" selection-start-line="696" selection-start-column="57" selection-end-line="696" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1368421">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="126" selection-start-line="4" selection-start-column="124" selection-end-line="4" selection-end-column="126" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_add.html">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-75.68421">
-          <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1489327653000" expanded="true" signature="0:265" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_back.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/public/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3473682">
-          <caret line="383" column="17" selection-start-line="383" selection-start-column="17" selection-end-line="383" selection-end-column="17" />
+        <state vertical-scroll-proportion="-33.805557">
+          <caret line="387" column="24" selection-start-line="387" selection-start-column="24" selection-end-line="387" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -761,18 +754,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_back.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-188.25">
+          <caret line="259" column="5" selection-start-line="259" selection-start-column="5" selection-end-line="259" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/music/ajax_albumn_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-40.515625">
+          <caret line="238" column="17" selection-start-line="238" selection-start-column="17" selection-end-line="238" selection-end-column="17" />
+          <folding>
+            <marker date="1494301643392" expanded="true" signature="4966:5101" placeholder="..." />
+            <marker date="1494301643392" expanded="true" signature="5135:5272" placeholder="..." />
+            <marker date="1494301643392" expanded="true" signature="5543:6080" placeholder="..." />
+            <marker date="1494301643392" expanded="true" signature="5838:5932" placeholder="..." />
+            <marker date="1494301643392" expanded="true" signature="7562:7655" placeholder="..." />
+            <marker date="1494301643392" expanded="true" signature="8218:8311" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/view/news/ajax_news_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64117646">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        <state vertical-scroll-proportion="-4.5555553">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.671875">
+          <caret line="86" column="24" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Music.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-123.0">
+          <caret line="179" column="11" selection-start-line="179" selection-start-column="11" selection-end-line="179" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/news/news_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8055556">
+          <caret line="290" column="29" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#17;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1494213373464" expanded="true" signature="8996:9022" placeholder="..." />
+            <marker date="1494213373464" expanded="true" signature="9210:9236" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/music/albumn_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.318102">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding />
         </state>
       </provider>

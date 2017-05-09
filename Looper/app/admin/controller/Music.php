@@ -61,7 +61,6 @@ class Music extends Base
 			}
 		}
 		echo $count;
-
 	}
 	public function artistalbumn_list(){
 		$artistname=input("artistname");
@@ -69,7 +68,6 @@ class Music extends Base
 		echo json_encode($fileid,JSON_UNESCAPED_UNICODE);
 	}
 	public function alertalbumn_edit(){
-
 		if(input("albumnid")){
 			$file=input("albumncover");
 			$albumnid=input("albumnid");

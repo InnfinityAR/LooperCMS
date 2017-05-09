@@ -251,28 +251,12 @@ class News extends Base
 				echo json_encode($diyflag_list,JSON_UNESCAPED_UNICODE);
 			}
 		}
-
 	}
     /**
      * Loop列表
      */
 	public function news_list()
 	{
-//		$loop_list=array(
-//			'page'=>4,
-//			'pageSize'=>10,
-//			'type'=>2,
-//		);
-//		$url = "http://api2.innfinityar.com/web/getLoop";
-//		$ch = curl_init();
-//		curl_setopt($ch, CURLOPT_URL, $url);//要访问的地址
-//		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//执行结果是否被返回，0是返回，1是不返回
-//		curl_setopt($ch, CURLOPT_POST, 1);// 发送一个常规的POST请求
-//		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($loop_list));
-//		$output = curl_exec($ch);//执行并获取数据
-//		curl_close($ch);
-//		$news=json_decode($output,true);
-//		print_r($news["data"]);exit();
 		$keytype=input('keytype','news_title');
 		$key=input('key');
 		$opentype_check=input('opentype_check','');
@@ -383,7 +367,10 @@ class News extends Base
                 $flag[] = $v;
             }
         }
+		$time=time();
         $sl_data = array(
+			'timestamp'=>$time,
+			'token'=>$this->aesSecret($time),
             'name' => input('news_title'),
             'description' => htmlspecialchars_decode(input('news_content')),
             'tags' => $flag,
@@ -415,34 +402,6 @@ class News extends Base
         curl_close($ch);
         if($output){
 			ajax_return($output);
-			$loop_list=json_decode($output,true);
-			$loopid=$loop_list["loopid"];
-//			if($files){
-//				foreach ($files as $file){
-//					$obj = new CurlFile();
-//					$music_list=array(
-//						'music'=>$file,
-//						'userId'=>19,
-//						'loopId'=>$loopid,
-//						'manageId'=>$manageid
-//					);
-//					$url = "http://api2.innfinityar.com/web/uploadMusic";
-//					$ch = curl_init();
-//					curl_setopt($ch, CURLOPT_URL, $url);//要访问的地址
-//					curl_setopt($ch,CURLOPT_UPLOAD,true);
-//					curl_setopt($ch, CURLOPT_HEADER, false);
-//					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);//执行结果是否被返回，0是返回，1是不返回
-//					curl_setopt($ch, CURLOPT_POST, 1);// 发送一个常规的POST请求
-//					curl_setopt($ch, CURLOPT_POSTFIELDS,$music_list);
-//					$output1 = curl_exec($ch);//执行并获取数据
-//					print_r($output1);
-//					curl_close($ch);
-//					var_dump($output1);exit();
-//					if($output){
-//						$this->success('loop上传,返回列表页',url('admin/News/news_list'));
-//					}
-//				}
-//			}
 		}
     }
     /**

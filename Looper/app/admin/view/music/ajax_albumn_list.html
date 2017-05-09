@@ -85,11 +85,25 @@
 <script>
 	var $manageid={$manageid};
 	var $path ="";
+	var $timestamp;
+	var $token;
 	$('[type="file"]').on('filebatchselected', function(event, files) {
 		for(i=0;i<$(this)[0].files.length;i++){
+			$.ajax({ //一个Ajax过程
+				url : "{:url('admin/Music/getToken')}", //与此php页面沟通
+				type: 'POST',
+				cache: false,
+				dataType:'json',
+				success: function(data){
+					$timestamp=data["timestamp"];
+					$token=data["token"];
+				}
+			});
 			var oMyForm = new FormData();
 			oMyForm.append("music", $(this)[0].files[i]);
-		oMyForm.append("manageId",$manageid );
+			oMyForm.append("manageId",$manageid );
+			oMyForm.append("timestamp",$timestamp );
+			oMyForm.append("token",$token );
 			$.ajax({ //一个Ajax过程
 				url : "http://api2.innfinityar.com/web/uploadMusic", //与此php页面沟通
 				type: 'post',
@@ -127,9 +141,11 @@
 						+'<span> 名称：</span>'
 						+'<input type="text" name="albumnname1"  size="50" value="'+data[0]["albumnname"]+'"/>'
 						+'</div>'
-						+'<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 专辑属性:</label>'
+						+'<label class="col-sm-2 control-label no-padding-right"> 专辑属性:</label>'
+						+'<label>'+data[0]["albumnstyle"]+'</label>'
+						+'<input type="hidden" name="albumnstyle" id="albumnstyle" value="'+data[0]["albumnstyle"]+'" />'
 				$str+='<div class="form-group">'
-						+'<span > 封面：</span>'
+						+'<span> 封面：</span>'
 						+'<input type="hidden" name="checkpic" id="checkpic" value="'+data[0]["albumncover"]+'" />'
 						+'<input type="hidden" name="oldcheckpic" id="oldcheckpic" value="'+data[0]["albumncover"]+'" />'
 						+'<a href="javascript:;" class="file" title="点击选择所要上传的图片">'
@@ -138,7 +154,6 @@
 						+'<span class="lbl">&nbsp;&nbsp;<img src="'+data[0]["albumncover"]+'" width="100" height="70" id="img0" ></span>&nbsp;&nbsp;'
 						+'</div>';
 						+'</div>';
-
 				$("#modal-body").html($str);
 				$("#file0").change(function () {
 					var objUrl = getObjectURL(this.files[0]);
@@ -171,7 +186,6 @@
 				window.location = "{:url('admin/Music/albumn_list')}"
 			}
 		});
-
 	})
 	var $j=1
 	$('[name="artistname"]').click(function(){
@@ -233,7 +247,6 @@
 								}
 							});
 						});
-
 					});
 				}
 			});
