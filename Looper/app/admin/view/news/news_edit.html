@@ -283,7 +283,7 @@
 			var oMyForm = new FormData();
 			oMyForm.append("music", $('#file-5')[0].files[i]);
 			oMyForm.append("manageId", {$manageid});
-			oMyForm.append("loopId", 254);
+			oMyForm.append("loopId", $loopid);
 			$.ajax({ //一个Ajax过程
 				type: "post", //以post方式与后台沟通
 				url : "http://api2.innfinityar.com/web/uploadMusic", //与此php页面沟通
